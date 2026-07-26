@@ -341,8 +341,8 @@ nav.menu ul li:hover::after {
 .hero .eyebrow {
   opacity: 0;
   animation: fadeUp .7s ease forwards .1s;
-  font-size: 16px;
-  padding: 10px 26px;
+  font-size: 13.5px;
+  padding: 6px 18px;
 }
 
 .hero h1 {
