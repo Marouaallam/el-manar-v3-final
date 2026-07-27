@@ -1,0 +1,50 @@
+/* Director Message Subpage CSS */
+.director-page-section {
+  padding: 80px 24px;
+}
+
+.director-card-container {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+  border: 2px solid #bfdbfe;
+  border-radius: 32px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 16px 40px rgba(7, 38, 89, 0.06);
+}
+
+.director-photo {
+  width: 100%;
+  height: 320px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(7, 38, 89, 0.15);
+}
+
+.director-quote blockquote {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #072659;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.director-signature-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--blue-700);
+}
+
+.director-signature-title {
+  font-size: 14.5px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .director-card-container {
+    grid-template-columns: 1fr;
+  }
+}

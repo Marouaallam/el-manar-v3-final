@@ -13,6 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dropdown.css">
 </head>
 
 <body>
@@ -22,24 +23,63 @@
 
     <header class="nav">
       <div class="nav-inner">
-        <a href="#" class="brand">
+        <a href="index.html" class="brand">
           <img src="assets/images/logo.png" alt="مدرسة المنار" class="logo-img">
           <span>مدرسة المنار</span>
         </a>
-        <nav class="menu">
+        <div class="mobile-toggle" id="mobile-toggle">☰</div>
+        <nav class="menu" id="nav-menu">
           <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">المدرسة ▾</a></li>
-            <li><a href="#">الحياة المدرسية</a></li>
-            <li><a href="#">أطوارنا ▾</a></li>
-            <li><a href="#">الخدمات ▾</a></li>
-            <li><a href="#">الأخبار</a></li>
-            <li><a href="#">الوظائف</a></li>
-            <li><a href="#">الاتصال</a></li>
+            <li><a href="index.html">الرئيسية</a></li>
+            
+            <li class="has-dropdown">
+              <a href="#">المدرسة <span class="dropdown-chevron">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="history-vision.html">التاريخ والرؤية</a></li>
+                <li><a href="values.html">القيم والرسالة</a></li>
+                <li><a href="director-message.html">كلمة المدير</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#">أطوارنا <span class="dropdown-chevron">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="primary-stage.html">الطور الابتدائي</a></li>
+                <li><a href="middle-stage.html">الطور المتوسط</a></li>
+                <li><a href="secondary-stage.html">الطور الثانوي</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#">الحياة المدرسية <span class="dropdown-chevron">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="cultural-religious-activities.html">الأنشطة الثقافية والدينية</a></li>
+                <li><a href="sports-activities.html">الأنشطة الرياضية</a></li>
+                <li><a href="educational-trips.html">الخرجات التربوية</a></li>
+                <li><a href="competitions.html">المسابقات والأولمبياد</a></li>
+                <li><a href="events-celebrations.html">الحفلات والاحتفالات</a></li>
+                <li><a href="social-commitment.html">الالتزام الاجتماعي</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#">الخدمات <span class="dropdown-chevron">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="school-transport.html">النقل المدرسي</a></li>
+                <li><a href="school-catering.html">المطعم والإطعام</a></li>
+                <li><a href="psychological-support.html">المتابعة النفسية والأرطفونية</a></li>
+                <li><a href="media-library.html">المكتبة ومكتبة الوسائط</a></li>
+              </ul>
+            </li>
+
+            <li><a href="digital-library.html">المكتبة الرقمية</a></li>
+            <li><a href="news.html">الأخبار</a></li>
+            <li><a href="careers.html">الوظائف</a></li>
+            <li><a href="contact.html">الاتصال</a></li>
           </ul>
         </nav>
         <div class="nav-actions">
-          <span class="signup-pill">تسجيل</span>
+          <a href="contact.html" class="signup-pill">تسجيل</a>
           <span class="lang-pill">Eng</span>
         </div>
       </div>

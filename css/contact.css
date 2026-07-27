@@ -1,0 +1,27 @@
+/* =============================================
+   EL MANAR – Contact Styles (contact.css)
+   ============================================= */
+
+.contact-page-section {
+  padding: 80px 24px;
+}
+
+.map-card-placeholder {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #fff;
+  border-radius: 28px;
+  padding: 60px 40px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.map-card-placeholder h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.map-card-placeholder p {
+  color: #94a3b8;
+  font-size: 16px;
+}
