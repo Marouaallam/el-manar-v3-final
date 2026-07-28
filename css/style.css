@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 /* =============================================
    EL MANAR – Modern Blue Design System
    ============================================= */
@@ -34,7 +35,7 @@
 }
 
 body {
-  font-family: 'Tajawal', 'Cairo', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.7;
@@ -46,7 +47,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Cairo', 'Tajawal', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-weight: 800;
   line-height: 1.25;
 }
@@ -111,10 +112,10 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 32px;
+  padding: 10px 22px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   cursor: pointer;
   transition: all .28s cubic-bezier(.4, 0, .2, 1);
@@ -669,7 +670,7 @@ nav.menu ul li:hover::after {
 }
 
 .anniv-text h2 {
-  font-family: 'Cairo', 'Tajawal', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-size: 30px;
   color: #072659;
   margin-top: 4px;
@@ -679,7 +680,7 @@ nav.menu ul li:hover::after {
 }
 
 .anniv-text p {
-  font-family: 'Tajawal', 'Cairo', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   color: #556885;
   font-size: 17.5px;
   font-weight: 600;
@@ -1663,7 +1664,7 @@ footer p {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.25s ease;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   box-shadow: none;
   display: inline-flex;
   align-items: center;
@@ -1705,7 +1706,7 @@ footer p {
   transition: all 0.2s ease;
   color: #072659;
   user-select: none;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   border: none;
 }
 
@@ -1738,7 +1739,7 @@ footer p {
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: 0 4px 14px rgba(21, 101, 192, 0.25);
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;

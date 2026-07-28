@@ -105,14 +105,26 @@
 /* Mobile Nav Toggle */
 .mobile-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
   color: var(--blue-800);
+  user-select: none;
 }
 
 @media (max-width: 900px) {
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Keep only the logo + name and mobile menu icon on mobile header */
+  .nav-actions {
+    display: none !important;
+  }
+
+  .nav-inner {
+    justify-content: space-between;
   }
 
   nav.menu {

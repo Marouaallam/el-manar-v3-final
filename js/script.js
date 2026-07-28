@@ -21,13 +21,16 @@ if (mobileToggle && navMenu) {
   });
 }
 
-// Mobile Dropdown Click Toggle
-document.querySelectorAll('.has-dropdown > a').forEach(dropdownLink => {
-  dropdownLink.addEventListener('click', (e) => {
+// Mobile Dropdown Chevron Click Toggle
+document.querySelectorAll('.dropdown-chevron').forEach(chevron => {
+  chevron.addEventListener('click', (e) => {
     if (window.innerWidth <= 900) {
       e.preventDefault();
-      const parent = dropdownLink.parentElement;
-      parent.classList.toggle('open');
+      e.stopPropagation();
+      const parent = chevron.closest('.has-dropdown');
+      if (parent) {
+        parent.classList.toggle('open');
+      }
     }
   });
 });

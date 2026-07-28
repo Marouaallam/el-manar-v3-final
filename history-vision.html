@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="التاريخ والرؤية التربوية لمدرسة المنار – مسيرة ربع قرن من التميز والتربية الأخلاقية.">
+  <meta name="description"
+    content="التاريخ والرؤية التربوية لمدرسة المنار – مسيرة ربع قرن من التميز والتربية الأخلاقية.">
   <title>التاريخ والرؤية – مدرسة المنار</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/dropdown.css">
   <link rel="stylesheet" href="css/history-vision.css">
@@ -28,9 +30,10 @@
         <nav class="menu" id="nav-menu">
           <ul>
             <li><a href="index.html">الرئيسية</a></li>
-            
+
             <li class="has-dropdown">
-              <a href="#" style="color: var(--blue-600);">المدرسة <span class="dropdown-chevron">▾</span></a>
+              <a href="history-vision.html" style="color: var(--blue-600);">المدرسة <span
+                  class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="history-vision.html">التاريخ والرؤية</a></li>
                 <li><a href="values.html">القيم والرسالة</a></li>
@@ -39,7 +42,7 @@
             </li>
 
             <li class="has-dropdown">
-              <a href="#">أطوارنا <span class="dropdown-chevron">▾</span></a>
+              <a href="primary-stage.html">أطوارنا <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="primary-stage.html">الطور الابتدائي</a></li>
                 <li><a href="middle-stage.html">الطور المتوسط</a></li>
@@ -48,7 +51,7 @@
             </li>
 
             <li class="has-dropdown">
-              <a href="#">الحياة المدرسية <span class="dropdown-chevron">▾</span></a>
+              <a href="cultural-religious-activities.html">الحياة المدرسية <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="cultural-religious-activities.html">الأنشطة الثقافية والدينية</a></li>
                 <li><a href="sports-activities.html">الأنشطة الرياضية</a></li>
@@ -60,7 +63,7 @@
             </li>
 
             <li class="has-dropdown">
-              <a href="#">الخدمات <span class="dropdown-chevron">▾</span></a>
+              <a href="school-transport.html">الخدمات <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="school-transport.html">النقل المدرسي</a></li>
                 <li><a href="school-catering.html">المطعم والإطعام</a></li>
@@ -76,7 +79,7 @@
           </ul>
         </nav>
         <div class="nav-actions">
-          <a href="contact.html" class="signup-pill">تسجيل</a>
+          <a href="registration.html" class="signup-pill">تسجيل</a>
           <span class="lang-pill">Eng</span>
         </div>
       </div>
@@ -92,88 +95,106 @@
     <p>مسيرة حافلة بالعطاء تمتد لأكثر من ربع قرن في خدمة التعليم المتميز وتنشئة الأجيال</p>
   </section>
 
-  <!-- DYNAMIC ALTERNATING CARDS SECTION -->
-  <section class="history-timeline-section">
-    <div class="container">
-      <div class="timeline-wrapper">
+  <!-- HORIZONTAL SINE-WAVE TIMELINE SECTION -->
+  <section class="wave-timeline-section">
 
-        <!-- 1. Milestone 2001 (Content Right, Image Left) -->
-        <div class="timeline-row reveal">
-          <div class="timeline-col-content">
-            <div class="timeline-card">
-              <span class="timeline-year-tag">عام 2001</span>
-              <h3>تأسيس المؤسسة والانطلاقة الأولى</h3>
-              <p>افتتاح أولى الفصول الدراسية لمرحلة التعليم الابتدائي بحي الحميز بالدار البيضاء. بدأت المسيرة بطاقم تربوي مخلص ورؤية واضحة تهدف لتقديم تعليم متميز يربط الطلاب بهويتهم وأخلاقهم.</p>
-            </div>
-          </div>
-          <div class="timeline-col-image">
-            <div class="timeline-img-box">
-              <img src="assets/images/primaire.png" alt="عام 2001 - تأسيس مدرسة المنار">
-            </div>
+    <!-- Scroll Container -->
+    <div class="wave-scroll-container">
+      <div class="wave-timeline-track">
+
+        <!-- SVG Sinusoidal Wave Line -->
+        <svg class="wave-svg" viewBox="0 0 2110 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#1d4ed8" />
+              <stop offset="35%" stop-color="#2563eb" />
+              <stop offset="70%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#0284c7" />
+            </linearGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+
+          <!-- Background Wave Line Glow -->
+          <path
+            d="M 0,350 C 90,350 90,430 180,430 C 355,430 355,270 530,270 C 705,270 705,430 880,430 C 1055,430 1055,270 1230,270 C 1405,270 1405,430 1580,430 C 1755,430 1755,270 1930,270 C 2020,270 2020,350 2110,350"
+            stroke="url(#waveGradient)" stroke-width="6" filter="url(#glow)" opacity="0.25" />
+
+          <!-- Main Curved Wave Path -->
+          <path
+            d="M 0,350 C 90,350 90,430 180,430 C 355,430 355,270 530,270 C 705,270 705,430 880,430 C 1055,430 1055,270 1230,270 C 1405,270 1405,430 1580,430 C 1755,430 1755,270 1930,270 C 2020,270 2020,350 2110,350"
+            stroke="url(#waveGradient)" stroke-width="4" stroke-linecap="round" />
+
+          <!-- Vertical Connector Stems -->
+          <line x1="180" y1="430" x2="180" y2="495" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4" />
+          <line x1="530" y1="270" x2="530" y2="205" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4" />
+          <line x1="880" y1="430" x2="880" y2="495" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4" />
+          <line x1="1230" y1="270" x2="1230" y2="205" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4" />
+          <line x1="1580" y1="430" x2="1580" y2="495" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4" />
+          <line x1="1930" y1="270" x2="1930" y2="205" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 4" />
+
+          <!-- Glowing Node Dots -->
+          <circle cx="180" cy="430" r="8" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="url(#glow)" />
+          <circle cx="530" cy="270" r="8" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="url(#glow)" />
+          <circle cx="880" cy="430" r="8" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="url(#glow)" />
+          <circle cx="1230" cy="270" r="8" fill="#ffffff" stroke="#3b82f6" stroke-width="3.5" filter="url(#glow)" />
+          <circle cx="1580" cy="430" r="8" fill="#ffffff" stroke="#3b82f6" stroke-width="3.5" filter="url(#glow)" />
+          <circle cx="1930" cy="270" r="8" fill="#ffffff" stroke="#0284c7" stroke-width="3.5" filter="url(#glow)" />
+        </svg>
+
+        <!-- Milestone 1 (2001 - Rightmost: Peak at x=1930, y=260 -> card-top) -->
+        <div class="wave-card-item card-top" style="left: 1770px;">
+          <div class="wave-card-inner">
+            <span class="wave-year-tag">عام 2001</span>
+            <h3>التأسيس والانطلاقة الأولى</h3>
+            <p>افتتاح أولى الفصول الدراسية بحي الحميز بالدار البيضاء بطاقم تربوي مخلص ورؤية واضحة، وإطلاق مكتب الإعلام.</p>
           </div>
         </div>
 
-        <!-- 2. Milestone 2008 (Image Right, Content Left) -->
-        <div class="timeline-row reveal">
-          <div class="timeline-col-content">
-            <div class="timeline-card">
-              <span class="timeline-year-tag">عام 2008</span>
-              <h3>افتتاح طور التعليم المتوسط وتوسعة المقر</h3>
-              <p>نظراً للنوايا الصادقة والإقبال الكبير من الأولياء، تم توسعة المقر المدرسي وافتتاح طور التعليم المتوسط وتجهيز أول مخبر للعلوم والتجريب العلمي وتوفير مكتبة ورقية شاملة.</p>
-            </div>
-          </div>
-          <div class="timeline-col-image">
-            <div class="timeline-img-box">
-              <img src="assets/images/cem.png" alt="عام 2008 - افتتاح الطور المتوسط">
-            </div>
+        <!-- Milestone 2 (2002 - Valley at x=1580, y=440 -> card-bottom) -->
+        <div class="wave-card-item card-bottom" style="left: 1420px;">
+          <div class="wave-card-inner">
+            <span class="wave-year-tag">عام 2002</span>
+            <h3>توسع شامل في المسار التعليمي والمهني</h3>
+            <p>افتتاح متوسطة وثانوية المنار للبنات، روضة الأطفال، وإطلاق قسم التكوين المهني للبنات.</p>
           </div>
         </div>
 
-        <!-- 3. Milestone 2015 (Content Right, Image Left) -->
-        <div class="timeline-row reveal">
-          <div class="timeline-col-content">
-            <div class="timeline-card">
-              <span class="timeline-year-tag">عام 2015</span>
-              <h3>إطلاق طور التعليم الثانوي وبكالوريا التميز</h3>
-              <p>تتويج المسيرة بافتتاح الطور الثانوي بكافة شعبه العلمية والأدبية، واستقطاب نخبة من خيرة الأساتذة والمؤطرين للتحضير لشهادة البكالوريا وتحقيق نسب نجاح باهرة تضاهي المدارس النموذجية.</p>
-            </div>
-          </div>
-          <div class="timeline-col-image">
-            <div class="timeline-img-box">
-              <img src="assets/images/lycee.png" alt="عام 2015 - إطلاق الطور الثانوي">
-            </div>
+        <!-- Milestone 3 (2003 - 2004 - Peak at x=1230, y=260 -> card-top) -->
+        <div class="wave-card-item card-top" style="left: 1070px;">
+          <div class="wave-card-inner">
+            <span class="wave-year-tag">عام 2003 - 2004</span>
+            <h3>آفاق أكاديمية ومهنية جديدة</h3>
+            <p>تأسيس مكتب الاعتصام المهني وكلية المنار للدراسات الإنسانية لجمع العلم الرفيع بالخلق الحميد.</p>
           </div>
         </div>
 
-        <!-- 4. Milestone 2020 (Image Right, Content Left) -->
-        <div class="timeline-row reveal">
-          <div class="timeline-col-content">
-            <div class="timeline-card">
-              <span class="timeline-year-tag">عام 2020</span>
-              <h3>التحول الرقمي وتحديث الوسائل البيداغوجية</h3>
-              <p>تحديث البنية التحتية التكنولوجية للمؤسسة عبر قاعات الإعلام الآلي، وتجهيز الأقسام بالشاشات التفاعلية وإطلاق المكتبة الرقمية لمرافقة الطلاب في البحوث والامتحانات.</p>
-            </div>
-          </div>
-          <div class="timeline-col-image">
-            <div class="timeline-img-box">
-              <img src="assets/images/life5.png" alt="عام 2020 - التحول الرقمي">
-            </div>
+        <!-- Milestone 4 (2005 - Valley at x=880, y=440 -> card-bottom) -->
+        <div class="wave-card-item card-bottom" style="left: 720px;">
+          <div class="wave-card-inner">
+            <span class="wave-year-tag">عام 2005</span>
+            <h3>تعزيز الجانب التربوي والإرشادي</h3>
+            <p>الافتتاح الرسمي لابتدائية المنار للبنات وتأسيس مكتب الوعظ والإرشاد لنشر الثقافة الأصيلة.</p>
           </div>
         </div>
 
-        <!-- 5. Milestone 2026 (Content Right, Image Left) -->
-        <div class="timeline-row reveal">
-          <div class="timeline-col-content">
-            <div class="timeline-card">
-              <span class="timeline-year-tag">عام 2026</span>
-              <h3>احتفالية ربع قرن – اليوبيل الفضي</h3>
-              <p>نحتفل بمرور 25 عاماً من الريادة والعطاء المستمر، بحصيلة تتجاوز 2000 طالب وطالبة ونسبة قبول جامعي تتعدى 96%، مع مواصلة التطلع لمستقبل تعليمي أرقى وأشمل.</p>
-            </div>
+        <!-- Milestone 5 (2008 - Peak at x=530, y=260 -> card-top) -->
+        <div class="wave-card-item card-top" style="left: 370px;">
+          <div class="wave-card-inner">
+            <span class="wave-year-tag">عام 2008</span>
+            <h3>دعم الأنشطة البدنية والشبابية</h3>
+            <p>تأسيس النادي الرياضي المنار لبناء العقل والجسم وتوفير متنفس آمن وهادف للشباب.</p>
           </div>
-          <div class="timeline-col-image">
-            <div class="timeline-img-box" style="background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 20px;">
-              <img src="assets/images/badge25.png" alt="عام 2026 - احتفالية ربع قرن" style="object-fit: contain;">
-            </div>
+        </div>
+
+        <!-- Milestone 6 (2026 - Leftmost: Valley at x=180, y=440 -> card-bottom) -->
+        <div class="wave-card-item card-bottom" style="left: 20px;">
+          <div class="wave-card-inner">
+            <span class="wave-year-tag">عام 2026</span>
+            <h3>احتفالية ربع قرن – اليوبيل الفضي</h3>
+            <p>نحتفل بمرور 25 عاماً من الريادة والعطاء المستمر، بحصيلة تتجاوز 2000 طالب وطالبة ونسبة قبول 96%.</p>
           </div>
         </div>
 
@@ -190,7 +211,8 @@
             <img src="assets/images/logo.png" alt="مدرسة المنار" class="foot-logo-img">
             <span>مدرسة المنار</span>
           </div>
-          <p style="margin-top:12px; color:#8f9dc4;">مؤسسة تعليمية رائدة منذ 2001، تجمع بين التعليم الأكاديمي المتميز والتربية الأخلاقية الأصيلة.</p>
+          <p style="margin-top:12px; color:#8f9dc4;">مؤسسة تعليمية رائدة منذ 2001، تجمع بين التعليم الأكاديمي المتميز
+            والتربية الأخلاقية الأصيلة.</p>
         </div>
         <div>
           <h5>روابط سريعة</h5>
@@ -226,6 +248,39 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script>
+    const slider = document.querySelector('.wave-scroll-container');
+    if (slider) {
+      // Start scrolled to the right (RTL - starting at year 2001)
+      window.addEventListener('load', () => {
+        slider.scrollLeft = slider.scrollWidth;
+      });
+      slider.scrollLeft = slider.scrollWidth;
+
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1.8;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    }
+  </script>
 </body>
 
 </html>

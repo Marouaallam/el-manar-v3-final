@@ -1,0 +1,556 @@
+/* =============================================
+   Registration Page Styling - El Manar Brand System
+   ============================================= */
+
+.registration-section {
+  padding: 60px 0 90px;
+  background-color: var(--blue-50);
+}
+
+.reg-card-container {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 45px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(18, 92, 183, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Brand Blue Dot Section Heading */
+.brand-dot-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--blue-900);
+  margin-bottom: 22px;
+}
+
+.brand-dot {
+  color: var(--blue-600);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.reg-intro-text {
+  font-size: 17.5px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.text-brand-highlight {
+  color: var(--blue-700);
+  font-weight: 700;
+}
+
+/* Schedule List */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0 30px;
+  padding-right: 10px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 17px;
+  color: var(--text);
+}
+
+.schedule-tag {
+  font-weight: 700;
+  font-size: 16.5px;
+  color: var(--blue-700);
+  background: var(--blue-100);
+  padding: 4px 14px;
+  border-radius: 6px;
+}
+
+/* Notes Block */
+.important-notes-block {
+  margin-top: 30px;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 25px;
+}
+
+.notes-heading {
+  color: var(--blue-800);
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.notes-list p {
+  position: relative;
+  padding-right: 20px;
+}
+
+.notes-list p::before {
+  content: '•';
+  position: absolute;
+  right: 0;
+  color: var(--blue-600);
+  font-weight: bold;
+}
+
+.video-link {
+  color: var(--blue-600);
+  font-weight: 700;
+  text-decoration: underline;
+  margin-right: 6px;
+}
+
+.video-link:hover {
+  color: var(--blue-800);
+}
+
+/* Level Selector Buttons Row - Brand System */
+.level-selector-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue-900);
+  margin: 35px 0 20px;
+}
+
+.level-selector-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.level-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 46px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(15, 84, 176, 0.18);
+  border: 2px solid transparent;
+  min-width: 200px;
+  text-align: center;
+}
+
+.level-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(15, 84, 176, 0.28);
+}
+
+/* El Manar Brand Palette for Level Buttons */
+.btn-primary-level {
+  background: linear-gradient(135deg, var(--blue-700), var(--blue-900));
+}
+
+.btn-middle-level {
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+}
+
+.btn-secondary-level {
+  background: linear-gradient(135deg, #0f4c81, #0a2f52);
+}
+
+/* STEP VIEWS CONTROL */
+.step-view {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.step-view.hidden-step {
+  display: none !important;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.step-view.active-step {
+  display: block !important;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Step 2 Back Button Header */
+.back-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.btn-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-back-link:hover {
+  background: var(--blue-500);
+  color: var(--white);
+}
+
+/* Status Banner */
+.reg-status-banner {
+  text-align: center;
+  margin-bottom: 35px;
+  background: var(--white);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(18, 92, 183, 0.08);
+}
+
+.live-time-badge {
+  font-size: 17px;
+  color: var(--blue-700);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.status-open-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #10b981; /* Brand Success Green */
+  margin-bottom: 6px;
+}
+
+.status-deadline-text {
+  font-size: 16px;
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
+/* Level Specific Rules Card */
+.level-rules-box {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 38px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(18, 92, 183, 0.1);
+  margin-bottom: 35px;
+}
+
+.rules-intro-p {
+  font-size: 17px;
+  color: var(--text);
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.rules-brand-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px 0 25px;
+  list-style: none;
+}
+
+.rule-item-brand {
+  color: var(--blue-800);
+  font-weight: 700;
+  font-size: 17.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notice-sub-block {
+  margin-top: 20px;
+  color: #c2410c;
+  font-size: 15.5px;
+  line-height: 1.8;
+  background: #fff7ed;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-right: 4px solid #f97316;
+}
+
+.alert-banner-brand {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 800;
+  padding: 16px 26px;
+  border-radius: 12px;
+  margin-top: 25px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(185, 28, 28, 0.2);
+}
+
+/* Registration Form Box */
+.registration-form-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 42px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(18, 92, 183, 0.1);
+}
+
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 28px;
+  margin-top: 28px;
+}
+
+.form-field-full {
+  grid-column: span 2;
+}
+
+.form-control-brand {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--text);
+  background-color: #ffffff;
+  border: 1.5px solid var(--blue-100);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-control-brand:focus {
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 4px rgba(21, 99, 188, 0.12);
+}
+
+select.form-control-brand {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%3C%23125cb7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 18px center;
+  background-size: 18px;
+  padding-left: 45px;
+}
+
+.checkbox-form-row {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-custom-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.checkbox-custom-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--blue-600);
+  cursor: pointer;
+}
+
+/* Action Buttons */
+.form-actions-flex {
+  grid-column: span 2;
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.btn-submit-brand {
+  flex: 1;
+  padding: 16px 28px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+  text-align: center;
+}
+
+.btn-submit-brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+}
+
+.btn-cancel-brand {
+  flex: 1;
+  padding: 16px 28px;
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  text-align: center;
+}
+
+.btn-cancel-brand:hover {
+  background-color: #e2e8f0;
+  color: var(--text);
+}
+
+/* Confirmation Modal */
+.reg-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 25, 56, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.reg-modal-backdrop.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.reg-modal-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 42px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.reg-modal-backdrop.active-modal .reg-modal-card {
+  transform: scale(1);
+}
+
+.modal-icon-check {
+  width: 70px;
+  height: 70px;
+  background: #dcfce7;
+  color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reg-card-container {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .brand-dot-title {
+    font-size: 21px;
+  }
+
+  .level-selector-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .level-btn {
+    width: 100%;
+    min-width: unset;
+    padding: 16px 24px;
+    font-size: 18px;
+  }
+
+  .form-grid-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field-full,
+  .checkbox-form-row,
+  .form-actions-flex {
+    grid-column: span 1;
+  }
+
+  .form-actions-flex {
+    flex-direction: column;
+  }
+
+  .level-rules-box,
+  .registration-form-card {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .status-open-title {
+    font-size: 28px;
+  }
+
+  .alert-banner-brand {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-card-container,
+  .level-rules-box,
+  .registration-form-card {
+    padding: 22px 16px;
+  }
+
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .live-time-badge {
+    font-size: 15px;
+  }
+
+  .status-open-title {
+    font-size: 24px;
+  }
+
+  .btn-back-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

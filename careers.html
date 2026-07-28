@@ -8,7 +8,7 @@
   <title>الوظائف وطلبات التوظيف – مدرسة المنار</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/dropdown.css">
   <link rel="stylesheet" href="css/careers.css">
@@ -30,7 +30,7 @@
             <li><a href="index.html">الرئيسية</a></li>
             
             <li class="has-dropdown">
-              <a href="#">المدرسة <span class="dropdown-chevron">▾</span></a>
+              <a href="history-vision.html">المدرسة <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="history-vision.html">التاريخ والرؤية</a></li>
                 <li><a href="values.html">القيم والرسالة</a></li>
@@ -39,7 +39,7 @@
             </li>
 
             <li class="has-dropdown">
-              <a href="#">أطوارنا <span class="dropdown-chevron">▾</span></a>
+              <a href="primary-stage.html">أطوارنا <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="primary-stage.html">الطور الابتدائي</a></li>
                 <li><a href="middle-stage.html">الطور المتوسط</a></li>
@@ -48,7 +48,7 @@
             </li>
 
             <li class="has-dropdown">
-              <a href="#">الحياة المدرسية <span class="dropdown-chevron">▾</span></a>
+              <a href="cultural-religious-activities.html">الحياة المدرسية <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="cultural-religious-activities.html">الأنشطة الثقافية والدينية</a></li>
                 <li><a href="sports-activities.html">الأنشطة الرياضية</a></li>
@@ -60,7 +60,7 @@
             </li>
 
             <li class="has-dropdown">
-              <a href="#">الخدمات <span class="dropdown-chevron">▾</span></a>
+              <a href="school-transport.html">الخدمات <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="school-transport.html">النقل المدرسي</a></li>
                 <li><a href="school-catering.html">المطعم والإطعام</a></li>
@@ -76,7 +76,7 @@
           </ul>
         </nav>
         <div class="nav-actions">
-          <a href="contact.html" class="signup-pill">تسجيل</a>
+          <a href="registration.html" class="signup-pill">تسجيل</a>
           <span class="lang-pill">Eng</span>
         </div>
       </div>
@@ -93,69 +93,77 @@
 
   <section class="careers-section">
     <div class="container">
+
+      <!-- CAREERS FILTER BAR (TWO TYPE FILTERS + ALL) -->
+      <div class="careers-filter-bar reveal">
+        <button class="filter-pill active" data-filter="all">جميع الوظائف</button>
+        <button class="filter-pill" data-filter="fulltime">دوام كامل</button>
+        <button class="filter-pill" data-filter="parttime">دوام جزئي</button>
+      </div>
+
       <div class="job-positions-grid reveal">
         
-        <div class="job-card">
+        <div class="job-card" data-type="fulltime">
           <div>
             <span class="job-type-pill">دوام كامل</span>
             <h3>أستاذ(ة) مادة الرياضيات (الطور الثانوي)</h3>
             <p>المؤهل المطلوب: شهادة ماستر أو لسانس في الرياضيات مع خبرة لا تقل عن 3 سنوات في أطوار الثانوي.</p>
           </div>
-          <a href="#apply-form" class="btn btn-outline">قدم الآن ←</a>
+          <a href="#apply-form" class="btn btn-outline btn-apply" onclick="selectJobTitle('أستاذ(ة) مادة الرياضيات (الطور الثانوي)')">قدم الآن ←</a>
         </div>
 
-        <div class="job-card">
+        <div class="job-card" data-type="fulltime">
           <div>
             <span class="job-type-pill">دوام كامل</span>
             <h3>أستاذ(ة) اللغة الإنجليزية (الطور المتوسط)</h3>
             <p>المؤهل المطلوب: شهادة جامعية في اللغة الإنجليزية مع تمكن ممتاز من أساليب التدريس الحديثة.</p>
           </div>
-          <a href="#apply-form" class="btn btn-outline">قدم الآن ←</a>
+          <a href="#apply-form" class="btn btn-outline btn-apply" onclick="selectJobTitle('أستاذ(ة) اللغة الإنجليزية (الطور المتوسط)')">قدم الآن ←</a>
         </div>
 
-        <div class="job-card">
+        <div class="job-card" data-type="fulltime">
           <div>
             <span class="job-type-pill">دوام كامل</span>
             <h3>مشرف تربوي وأخصائي استماع</h3>
             <p>المؤهل المطلوب: شهادة في علم النفس التربوي أو علوم التربية مع مهارات عالية في التواصل مع التلاميذ.</p>
           </div>
-          <a href="#apply-form" class="btn btn-outline">قدم الآن ←</a>
+          <a href="#apply-form" class="btn btn-outline btn-apply" onclick="selectJobTitle('مشرف تربوي وأخصائي استماع')">قدم الآن ←</a>
         </div>
 
-        <div class="job-card">
+        <div class="job-card" data-type="fulltime">
           <div>
             <span class="job-type-pill">دوام كامل</span>
             <h3>أستاذ(ة) اللغة الفرنسية (الطور الابتدائي)</h3>
             <p>المؤهل المطلوب: شهادة جامعية في اللغة الفرنسية مع مهارة فائقة في التنشيط البيداغوجي للأطفال.</p>
           </div>
-          <a href="#apply-form" class="btn btn-outline">قدم الآن ←</a>
+          <a href="#apply-form" class="btn btn-outline btn-apply" onclick="selectJobTitle('أستاذ(ة) اللغة الفرنسية (الطور الابتدائي)')">قدم الآن ←</a>
         </div>
 
-        <div class="job-card">
+        <div class="job-card" data-type="fulltime">
           <div>
             <span class="job-type-pill">دوام كامل</span>
             <h3>أستاذ(ة) العلوم الفيزيائية (الطور الثانوي)</h3>
             <p>المؤهل المطلوب: ماستر في الفيزياء أو الكيمياء مع خبرة ممتازة في تحضير أقسام البكالوريا.</p>
           </div>
-          <a href="#apply-form" class="btn btn-outline">قدم الآن ←</a>
+          <a href="#apply-form" class="btn btn-outline btn-apply" onclick="selectJobTitle('أستاذ(ة) العلوم الفيزيائية (الطور الثانوي)')">قدم الآن ←</a>
         </div>
 
-        <div class="job-card">
+        <div class="job-card" data-type="parttime fulltime">
           <div>
-            <span class="job-type-pill">جزئي / كامل</span>
+            <span class="job-type-pill">دوام جزئي</span>
             <h3>أخصائي أرطفوني ومتابع الصعوبات التعلمية</h3>
             <p>المؤهل المطلوب: شهادة أخصائي أرطفوني ومتابعة حالات اضطرابات الكلام والنطق لدى الأطفال.</p>
           </div>
-          <a href="#apply-form" class="btn btn-outline">قدم الآن ←</a>
+          <a href="#apply-form" class="btn btn-outline btn-apply" onclick="selectJobTitle('أخصائي أرطفوني ومتابع الصعوبات التعلمية')">قدم الآن ←</a>
         </div>
 
-        <div class="job-card">
+        <div class="job-card" data-type="fulltime">
           <div>
             <span class="job-type-pill">دوام كامل</span>
             <h3>مساعد إداري ومسؤول الاستقبال والاتصال</h3>
             <p>المؤهل المطلوب: شهادة تقني سامي أو لسانس في الإعلام مع إتقان استخدام برمجيات المكتبية والتعامل مع الأولياء.</p>
           </div>
-          <a href="#apply-form" class="btn btn-outline">قدم الآن ←</a>
+          <a href="#apply-form" class="btn btn-outline btn-apply" onclick="selectJobTitle('مساعد إداري ومسؤول الاستقبال والاتصال')">قدم الآن ←</a>
         </div>
 
       </div>
@@ -177,7 +185,11 @@
       <div class="application-form-container reveal" id="apply-form">
         <div class="form-title">
           <h2>استمارة طلب التوظيف</h2>
-          <p style="color: #64748b; margin-top: 6px;">يرجى ملء كافة البيانات وإرفاق السيرة الذاتية (CV)</p>
+          <div id="selected-job-header-box" style="margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; background: #e0f2fe; color: #0369a1; padding: 8px 20px; border-radius: 999px; font-weight: 700; font-size: 15px; border: 1px solid #bae6fd;">
+            <span>المنصب المستهدف:</span>
+            <span id="selected-job-header-title" style="color: #0284c7; font-weight: 800;">طلب توظيف عام</span>
+          </div>
+          <p style="color: #64748b; margin-top: 10px;">يرجى ملء كافة البيانات وإرفاق السيرة الذاتية (CV)</p>
         </div>
 
         <form onsubmit="event.preventDefault(); alert('تم إرسال طلب التوظيف بنجاح! سيتواصل معكم قسم الموارد البشرية في حال ملاءمة ملفكم.');">
@@ -195,14 +207,17 @@
               <input type="tel" placeholder="05XX XX XX XX" required>
             </div>
             <div class="form-group">
-              <label>المناصب المستهدفة</label>
-              <select required>
-                <option value="">اختر التخصص المطلوب</option>
-                <option>استاذ طور ابتدائي</option>
-                <option>أستاذ طور متوسط</option>
-                <option>أستاذ طور ثانوي</option>
-                <option>إداري / مشرف تربوي</option>
-                <option>أخصائي نفساني / أرطفوني</option>
+              <label>المسمى الوظيفي (المنصب المطلوب)</label>
+              <select id="job-select" required>
+                <option value="">اختر الوظيفة المراد التقديم عليها</option>
+                <option value="أستاذ(ة) مادة الرياضيات (الطور الثانوي)">أستاذ(ة) مادة الرياضيات (الطور الثانوي)</option>
+                <option value="أستاذ(ة) اللغة الإنجليزية (الطور المتوسط)">أستاذ(ة) اللغة الإنجليزية (الطور المتوسط)</option>
+                <option value="مشرف تربوي وأخصائي استماع">مشرف تربوي وأخصائي استماع</option>
+                <option value="أستاذ(ة) اللغة الفرنسية (الطور الابتدائي)">أستاذ(ة) اللغة الفرنسية (الطور الابتدائي)</option>
+                <option value="أستاذ(ة) العلوم الفيزيائية (الطور الثانوي)">أستاذ(ة) العلوم الفيزيائية (الطور الثانوي)</option>
+                <option value="أخصائي أرطفوني ومتابع الصعوبات التعلمية">أخصائي أرطفوني ومتابع الصعوبات التعلمية</option>
+                <option value="مساعد إداري ومسؤول الاستقبال والاتصال">مساعد إداري ومسؤول الاستقبال والاتصال</option>
+                <option value="منصب آخر / طلب توظيف عفوي">منصب آخر / طلب توظيف عفوي</option>
               </select>
             </div>
             <div class="form-group full">
@@ -270,6 +285,43 @@
 
   <script src="js/script.js"></script>
   <script src="js/pagination.js"></script>
+  <script>
+    function selectJobTitle(jobTitle) {
+      const headerTitle = document.getElementById('selected-job-header-title');
+      if (headerTitle) {
+        headerTitle.textContent = jobTitle;
+      }
+
+      const selectElement = document.getElementById('job-select');
+      if (selectElement) {
+        selectElement.value = jobTitle;
+      }
+    }
+
+    document.getElementById('job-select')?.addEventListener('change', (e) => {
+      const val = e.target.value;
+      const headerTitle = document.getElementById('selected-job-header-title');
+      if (headerTitle) {
+        headerTitle.textContent = val ? val : 'طلب توظيف عام';
+      }
+    });
+
+    document.querySelectorAll('.careers-filter-bar .filter-pill').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.careers-filter-bar .filter-pill').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.getAttribute('data-filter');
+        document.querySelectorAll('.job-card').forEach(card => {
+          const type = card.getAttribute('data-type') || '';
+          if (filter === 'all' || type.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
