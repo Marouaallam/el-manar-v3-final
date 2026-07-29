@@ -9,12 +9,29 @@
   <title>مدرسة المنار – جذور راسخة وآفاق واعدة</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/dropdown.css">
 </head>
 
 <body>
+
+  <!-- SITE PRELOADER ANIMATION -->
+  <div id="site-loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="assets/images/logo.png" alt="مدرسة المنار">
+      </div>
+      <div class="loader-slogan">
+        <span class="loader-word word-1">جذور</span>
+        <span class="loader-word word-2">راسخة</span>
+        <span class="loader-word word-3">و</span>
+        <span class="loader-word word-4">آفاق</span>
+        <span class="loader-word word-5">واعدة</span>
+      </div>
+    </div>
+  </div>
 
   <div class="topbar">يوم الأبواب المفتوحة – الأحد 1 سبتمبر 2026 · سجّل الآن</div>
   <div class="nav-wrap">
@@ -29,7 +46,7 @@
         <nav class="menu" id="nav-menu">
           <ul>
             <li><a href="index.html">الرئيسية</a></li>
-            
+
             <li class="has-dropdown">
               <a href="history-vision.html">المدرسة <span class="dropdown-chevron">▾</span></a>
               <ul class="dropdown-menu">
@@ -86,25 +103,53 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="badge-float left">
-      <div class="badge-icon">🎓</div>
-      <div class="badge-content">
-        <span class="big">96%</span>
-        <span class="lbl">قبول جامعي</span>
-      </div>
+    <div class="hero-bg"></div>
+    <div class="hero-lighting">
+      <div class="light-beam"></div>
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
     </div>
-    <div class="badge-float right">
-      <div class="badge-icon">🏆</div>
-      <div class="badge-content">
-        <span class="big">#1</span>
-        <span class="lbl">تميز تعليمي</span>
-      </div>
+
+    <!-- Floating Mathematical & Arabic Letters Background -->
+    <div class="math-floating-bg">
+      <!-- Left Side Floating Elements -->
+      <span class="math-item" style="top: 10%; left: 6%; animation-duration: 16s; animation-delay: 0s; font-size: 30px;">+</span>
+      <span class="math-item" style="top: 18%; left: 16%; animation-duration: 20s; animation-delay: -4s; font-size: 28px;">أ</span>
+      <span class="math-item" style="top: 28%; left: 8%; animation-duration: 18s; animation-delay: -7s; font-size: 22px;">1 + 1 = 2</span>
+      <span class="math-item" style="top: 38%; left: 19%; animation-duration: 22s; animation-delay: -2s; font-size: 27px;">ب</span>
+      <span class="math-item" style="top: 48%; left: 5%; animation-duration: 15s; animation-delay: -9s; font-size: 32px;">×</span>
+      <span class="math-item" style="top: 58%; left: 15%; animation-duration: 19s; animation-delay: -5s; font-size: 24px;">علم</span>
+      <span class="math-item" style="top: 68%; left: 8%; animation-duration: 24s; animation-delay: -11s; font-size: 26px;">√x</span>
+      <span class="math-item" style="top: 78%; left: 17%; animation-duration: 17s; animation-delay: -3s; font-size: 28px;">ض</span>
+      <span class="math-item" style="top: 86%; left: 6%; animation-duration: 21s; animation-delay: -8s; font-size: 30px;">÷</span>
+
+      <!-- Right Side Floating Elements -->
+      <span class="math-item" style="top: 12%; right: 7%; animation-duration: 18s; animation-delay: -2s; font-size: 25px;">اقرأ</span>
+      <span class="math-item" style="top: 22%; right: 18%; animation-duration: 23s; animation-delay: -6s; font-size: 22px;">π ≈ 3.14</span>
+      <span class="math-item" style="top: 32%; right: 9%; animation-duration: 16s; animation-delay: -10s; font-size: 28px;">ت</span>
+      <span class="math-item" style="top: 42%; right: 21%; animation-duration: 20s; animation-delay: -1s; font-size: 22px;">a + b = c</span>
+      <span class="math-item" style="top: 52%; right: 8%; animation-duration: 19s; animation-delay: -7s; font-size: 25px;">قلم</span>
+      <span class="math-item" style="top: 62%; right: 17%; animation-duration: 14s; animation-delay: -4s; font-size: 32px;">=</span>
+      <span class="math-item" style="top: 72%; right: 9%; animation-duration: 22s; animation-delay: -12s; font-size: 29px;">ن</span>
+      <span class="math-item" style="top: 82%; right: 19%; animation-duration: 17s; animation-delay: -5s; font-size: 26px;">%</span>
+      <span class="math-item" style="top: 88%; right: 8%; animation-duration: 21s; animation-delay: -9s; font-size: 28px;">ع</span>
+
+      <!-- Top / Bottom Center Floating Elements -->
+      <span class="math-item" style="top: 8%; left: 45%; animation-duration: 25s; animation-delay: -13s; font-size: 26px;">س</span>
+      <span class="math-item" style="top: 14%; right: 42%; animation-duration: 18s; animation-delay: -8s; font-size: 24px;">x²</span>
+      <span class="math-item" style="top: 85%; left: 42%; animation-duration: 20s; animation-delay: -3s; font-size: 28px;">م</span>
+      <span class="math-item" style="top: 90%; right: 38%; animation-duration: 16s; animation-delay: -11s; font-size: 24px;">½</span>
     </div>
+
     <div class="container">
-      <span class="eyebrow"> تأسست عام 2001 – الحميز بلدية الدار البيضاء الجزائر</span>
+      <span class="eyebrow">تأسست عام 2001 – الحميز بلدية الدار البيضاء الجزائر</span>
       <h1>جذور راسخة<br>و <span class="hero-underline">آفاق واعدة</span></h1>
-      <p>مؤسسة المنار للتربية والتعليم – بنيّ الإيمان والمعرفة والشخصية منذ 2001.</p>
-      <a class="btn btn-primary" id="hero-cta">ابدأ رحلتك التعليمية ←</a>
+      <p>مؤسسة المنار للتربية والتعليم – بناء الإيمان والمعرفة والشخصية منذ 2001.</p>
+
+      <div class="hero-actions">
+        <a href="registration.html" class="btn btn-primary" id="hero-cta">ابدأ رحلتك التعليمية ←</a>
+        <a href="#stages" class="btn btn-outline-glass">اكتشف أطوارنا ▾</a>
+      </div>
     </div>
   </section>
 
@@ -113,10 +158,12 @@
       <div class="anniv-card reveal">
         <div class="anniv-inner">
           <img class="anniv-badge" src="assets/images/badge25.png" alt="25 عاماً 2001 – 2026">
-          <img class="anniv-rob3" src="assets/images/rob3.png" alt="ربع قرن">
-          <div class="anniv-text">
-            <h2>لانطلاق التعليم بمركب المنار</h2>
-            <p>الاحتفال بربع قرن من التميز والريادة التربوية في خدمة الأجيال</p>
+          <div class="anniv-content">
+            <img class="anniv-rob3" src="assets/images/rob3.png" alt="ربع قرن">
+            <div class="anniv-text">
+              <h2>لانطلاق التعليم بمركب المنار</h2>
+              <p>الاحتفال بربع قرن من التميز والريادة التربوية في خدمة الأجيال</p>
+            </div>
           </div>
         </div>
       </div>
@@ -154,19 +201,19 @@
     <div class="container">
       <div class="stats-grid reveal reveal-stagger">
         <div class="stat-card">
-          <div class="num">+2000</div>
+          <div class="num" data-target="2000" data-prefix="+" data-suffix="">+0</div>
           <div class="lbl">طالب وطالبة</div>
         </div>
         <div class="stat-card">
-          <div class="num">+180</div>
+          <div class="num" data-target="180" data-prefix="+" data-suffix="">+0</div>
           <div class="lbl">معلم وأستاذ مؤهل</div>
         </div>
         <div class="stat-card">
-          <div class="num">96%</div>
+          <div class="num" data-target="96" data-prefix="" data-suffix="%">0%</div>
           <div class="lbl">قبول جامعي ونجاح</div>
         </div>
         <div class="stat-card">
-          <div class="num">+25</div>
+          <div class="num" data-target="25" data-prefix="+" data-suffix="">+0</div>
           <div class="lbl">عام من التميز</div>
         </div>
       </div>
@@ -174,7 +221,7 @@
   </section>
 
   <!-- STAGES / SOLUTIONS GRID -->
-  <section class="stages">
+  <section class="stages" id="stages">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow light">أطوارنا التعليمية</span>
@@ -190,7 +237,7 @@
             <span class="stage-tag tag-pink">🧸 الابتدائي</span>
             <p>أساس تربوي متين يتعلّم فيه أبناؤنا القراءة والكتابة والطقوس الإيمانية في بيئة دافئة ومشوقة.</p>
             <ul class="check-list" style="margin: 16px 0 20px;">
-              <li><span class="check-icon">✓</span> حفظ القرآن الكريم واللغات</li>
+              <li><span class="check-icon">✓</span> إتقان المهارات واللغات</li>
               <li><span class="check-icon">✓</span> أنشطة تفاعلية واكتشافية</li>
             </ul>
             <button class="stage-link link-pink"> اكتشف المزيد ←</button>
@@ -246,7 +293,7 @@
             </svg>
           </div>
           <h4>التأصيل الأخلاقي والديني</h4>
-          <p>ترسيم القيم الأصيلة والتربية الأخلاقية القائمة على حفظ كتاب الله والتوجيه السلوكي النبيل.</p>
+          <p>ترسيم القيم الأصيلة والتربية الأخلاقية التفاعلية والتوجيه السلوكي النبيل.</p>
         </div>
         <div class="adv-card">
           <div class="adv-icon">
@@ -314,41 +361,88 @@
         <span class="eyebrow">أحدث الأخبار</span>
         <h3>من مجتمعنا التعليمي</h3>
       </div>
-      <div class="news-grid reveal reveal-stagger">
-        <div class="news-card">
-          <div class="news-photo">
-            <img src="assets/images/life5.png" alt="أولمبياد العلوم">
-            <span class="news-cat">🥇 تفوق</span>
+      <!-- Infinite Marquee Slider Wrap -->
+      <div class="news-slider-wrap reveal">
+        <div class="news-slider-track">
+          <!-- Card 1 -->
+          <div class="news-card">
+            <div class="news-photo">
+              <img src="assets/images/life5.jpeg" alt="أولمبياد العلوم">
+              <span class="news-cat">📖 فعاليات</span>
+            </div>
+            <div class="news-body">
+              <div class="news-date">📅 22 مايو 2026</div>
+              <h4>دورة في الإسعافات الأولية</h4>
+              <p>نظمت ابتدائية المنار دورة في الاسعافات الأولية لفائدة تلاميذ السنة الخامسة، بمبادرة وإشراف المعلمة والدكتورة عميار هدى ، تحت شعار المسعف الصغير</p>
+              <button class="news-more">اقرأ المزيد ←</button>
+            </div>
           </div>
-          <div class="news-body">
-            <div class="news-date">📅 22 مايو 2026</div>
-            <h4>طلاب المنار يفوزون بالأولمبياد الوطني للعلوم</h4>
-            <p>فريق من طلابنا يحصد المراكز الأولى في المسابقة الوطنية للعلوم لهذا العام.</p>
-            <button class="news-more">اقرأ المزيد ←</button>
+          <!-- Card 2 -->
+          <div class="news-card">
+            <div class="news-photo">
+              <img src="assets/images/life6.png" alt="يوم العلم ونصرة غزة">
+              <span class="news-cat">📖 فعاليات</span>
+            </div>
+            <div class="news-body">
+              <div class="news-date">📅 16 أبريل 2026</div>
+              <h4>تغطية فعاليات يوم العلم والمعرفة</h4>
+              <p>شارك طلابنا في فعاليات متنوعة تبرز الإبداع العلمي والفكري لشباب المؤسسة.</p>
+              <button class="news-more">اقرأ المزيد ←</button>
+            </div>
           </div>
-        </div>
-        <div class="news-card">
-          <div class="news-photo">
-            <img src="assets/images/life6.png" alt="يوم العلم ونصرة غزة">
-            <span class="news-cat">📖 فعاليات</span>
+          <!-- Card 3 -->
+          <div class="news-card">
+            <div class="news-photo">
+              <img src="assets/images/life0.jpeg" alt="يوم الأبواب المفتوحة">
+              <span class="news-cat">📖 فعاليات</span>
+            </div>
+            <div class="news-body">
+              <div class="news-date">📅 1 سبتمبر 2026</div>
+              <h4>زيارة مركز الكرامة لذوي الهمم</h4>
+              <p>نظّمت ابتدائية المنار زيارة لفائدة تلاميذ السنة الخامسة إلى #مركز_الكرامة. وقد هدفت هذه الزيارة إلى مدّ جسور التواصل والتعاون</p>
+              <button class="news-more">اقرأ المزيد ←</button>
+            </div>
           </div>
-          <div class="news-body">
-            <div class="news-date">📅 16 أبريل 2026</div>
-            <h4>تغطية فعاليات يوم العلم والمعرفة</h4>
-            <p>شارك طلابنا في فعاليات متنوعة تبرز الإبداع العلمي والفكري لشباب المؤسسة.</p>
-            <button class="news-more">اقرأ المزيد ←</button>
+
+          <!-- Duplicated Set for Seamless Infinite Loop -->
+          <!-- Card 1 Duplicate -->
+          <div class="news-card">
+            <div class="news-photo">
+              <img src="assets/images/life5.jpeg" alt="أولمبياد العلوم">
+              <span class="news-cat">📖 فعاليات</span>
+            </div>
+            <div class="news-body">
+              <div class="news-date">📅 22 مايو 2026</div>
+              <h4>دورة في الإسعافات الأولية</h4>
+              <p>نظمت ابتدائية المنار دورة في الاسعافات الأولية لفائدة تلاميذ السنة الخامسة، بمبادرة وإشراف المعلمة والدكتورة عميار هدى ، تحت شعار المسعف الصغير</p>
+              <button class="news-more">اقرأ المزيد ←</button>
+            </div>
           </div>
-        </div>
-        <div class="news-card">
-          <div class="news-photo">
-            <img src="assets/images/life1.png" alt="يوم الأبواب المفتوحة">
-            <span class="news-cat">🏆 تسجيل</span>
+          <!-- Card 2 Duplicate -->
+          <div class="news-card">
+            <div class="news-photo">
+              <img src="assets/images/life6.png" alt="يوم العلم ونصرة غزة">
+              <span class="news-cat">📖 فعاليات</span>
+            </div>
+            <div class="news-body">
+              <div class="news-date">📅 16 أبريل 2026</div>
+              <h4>تغطية فعاليات يوم العلم والمعرفة</h4>
+              <p>شارك طلابنا في فعاليات متنوعة تبرز الإبداع العلمي والفكري لشباب المؤسسة.</p>
+              <button class="news-more">اقرأ المزيد ←</button>
+            </div>
           </div>
-          <div class="news-body">
-            <div class="news-date">📅 1 سبتمبر 2026</div>
-            <h4>يوم الأبواب المفتوحة للسنة الدراسية الجديدة</h4>
-            <p>ندعو أولياء الأمور والطلاب الجدد لزيارة حرمنا والتعرف على مرافقنا وبرامجنا.</p>
-            <button class="news-more">اقرأ المزيد ←</button>
+          <!-- Card 3 Duplicate -->
+          <div class="news-card">
+            <div class="news-photo">
+              <img src="assets/images/life0.jpeg" alt="يوم الأبواب المفتوحة">
+              <span class="news-cat">📖 فعاليات</span>
+            </div>
+            <div class="news-body">
+              <div class="news-date">📅 1 سبتمبر 2026</div>
+              <h4>زيارة مركز الكرامة لذوي الهمم</h4>
+              <p>نظّمت ابتدائية المنار زيارة لفائدة تلاميذ السنة الخامسة إلى #مركز_الكرامة. وقد هدفت هذه الزيارة إلى مدّ جسور التواصل والتعاون</p>
+              <button class="news-more">اقرأ المزيد ←</button>
+            </div>
           </div>
         </div>
       </div>
