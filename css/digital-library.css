@@ -1,6 +1,6 @@
 /* =============================================
    EL MANAR – Digital Library Styles (digital-library.css)
-   Line-based Realigned Horizontal Layout
+   Neubrutalism Design System
    ============================================= */
 
 .library-section {
@@ -16,49 +16,68 @@
 }
 
 .filter-pill {
-  padding: 10px 24px;
-  border-radius: 999px;
-  background: var(--gray-100);
-  color: var(--gray-700);
+  padding: 10px 22px;
+  border-radius: var(--brutal-radius-pill, 9999px);
+  background: #ffffff;
+  color: var(--text, #071938);
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  border: 1.5px solid transparent;
-  transition: all 0.25s ease;
+  border: var(--brutal-border-width-sm, 2px) solid var(--brutal-border-color, #0d1527);
+  box-shadow: 3.5px 3.5px 0px var(--brutal-border-color, #0d1527);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
 }
 
-.filter-pill:hover,
+.filter-pill:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5.5px 5.5px 0px var(--brutal-border-color, #0d1527);
+  background: var(--blue-50, #f0f7ff);
+  color: var(--blue-800, #0a3d82);
+}
+
 .filter-pill.active {
-  background: var(--blue-500);
+  background: var(--blue-600, #1565C0);
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(21, 101, 192, 0.3);
+  border-color: var(--brutal-border-color, #0d1527);
+  box-shadow: 3.5px 3.5px 0px var(--brutal-border-color, #0d1527);
+}
+
+.filter-pill.active:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5.5px 5.5px 0px var(--brutal-border-color, #0d1527);
+  background: var(--blue-700, #0f54b0);
+  color: #ffffff;
+}
+
+.filter-pill:active {
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 1.5px 1.5px 0px var(--brutal-border-color, #0d1527);
 }
 
 /* Realigned Line-Based Horizontal Layout for Digital Library Resources */
 .resource-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .resource-card {
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: var(--brutal-radius-card, 20px);
   padding: 22px 30px;
-  border: 1px solid rgba(21, 99, 188, 0.12);
-  box-shadow: 0 4px 18px rgba(7, 38, 89, 0.04);
+  border: var(--brutal-border-width, 3px) solid var(--brutal-border-color, #0d1527);
+  box-shadow: var(--brutal-shadow, 6px 6px 0px #0d1527);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .resource-card:hover {
-  transform: translateX(-6px);
-  box-shadow: 0 12px 32px rgba(21, 99, 188, 0.12);
-  border-color: rgba(21, 99, 188, 0.3);
+  transform: translate(-3.5px, -3.5px);
+  box-shadow: var(--brutal-shadow-hover, 10px 10px 0px #0d1527);
 }
 
 .resource-card > div:first-child {
@@ -82,35 +101,39 @@
 
 .file-type-badge {
   background: #fee2e2;
-  color: #dc2626;
+  color: #b91c1c;
   font-weight: 800;
   font-size: 13px;
   padding: 5px 14px;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--brutal-border-color, #0d1527);
+  box-shadow: 2px 2px 0px var(--brutal-border-color, #0d1527);
   letter-spacing: 0.5px;
 }
 
 .resource-stage-tag {
   background: #e0f2fe;
-  color: #0284c7;
-  font-weight: 700;
+  color: #0369a1;
+  font-weight: 800;
   font-size: 12.5px;
-  padding: 4px 12px;
-  border-radius: 999px;
+  padding: 5px 14px;
+  border-radius: var(--brutal-radius-pill, 9999px);
+  border: 1.5px solid var(--brutal-border-color, #0d1527);
+  box-shadow: 2px 2px 0px var(--brutal-border-color, #0d1527);
   white-space: nowrap;
 }
 
 .resource-card h4 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 800;
   color: #072659;
   margin-bottom: 5px;
   line-height: 1.4;
 }
 
 .resource-card p {
-  font-size: 14px;
-  color: #64748b;
+  font-size: 14.5px;
+  color: #556885;
   margin-bottom: 0;
   line-height: 1.5;
 }
@@ -121,8 +144,8 @@
   gap: 20px;
   padding-top: 0;
   border-top: none;
-  font-size: 13.5px;
-  color: #64748b;
+  font-size: 14px;
+  color: #556885;
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -130,16 +153,19 @@
 .btn-download {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: var(--blue-50);
-  color: var(--blue-700);
-  font-weight: 700;
-  font-size: 13.5px;
-  padding: 6px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--blue-100);
-  transition: all 0.25s ease;
+  gap: 8px;
+  background: var(--blue-50, #f0f7ff);
+  color: var(--blue-800, #0f54b0);
+  font-weight: 800;
+  font-size: 14px;
+  padding: 9px 20px;
+  border-radius: var(--brutal-radius-pill, 9999px);
+  border: var(--brutal-border-width-sm, 2px) solid var(--brutal-border-color, #0d1527);
+  box-shadow: 3px 3px 0px var(--brutal-border-color, #0d1527);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
   white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-download svg {
@@ -147,19 +173,23 @@
   height: 16px;
   stroke: currentColor;
   flex-shrink: 0;
-  transition: transform 0.25s ease;
+  transition: transform 0.15s ease;
 }
 
 .btn-download:hover {
-  background: var(--blue-500);
+  background: var(--blue-600, #1565C0);
   color: #ffffff;
-  border-color: var(--blue-500);
-  box-shadow: 0 6px 18px rgba(21, 101, 192, 0.3);
-  transform: translateY(-2px);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--brutal-border-color, #0d1527);
 }
 
 .btn-download:hover svg {
   transform: translateY(2px);
+}
+
+.btn-download:active {
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 1.5px 1.5px 0px var(--brutal-border-color, #0d1527);
 }
 
 @media (max-width: 900px) {
@@ -171,7 +201,8 @@
   }
 
   .resource-card:hover {
-    transform: translateY(-4px);
+    transform: translate(-3px, -3px);
+    box-shadow: var(--brutal-shadow-hover, 10px 10px 0px #0d1527);
   }
 
   .resource-card > div:first-child {
@@ -190,6 +221,6 @@
     width: 100%;
     justify-content: space-between;
     padding-top: 16px;
-    border-top: 1px solid #f1f5f9;
+    border-top: 2px solid var(--brutal-border-color, #0d1527);
   }
 }

@@ -19,9 +19,21 @@
 
   <!-- SITE PRELOADER ANIMATION -->
   <div id="site-loader">
+    <script>
+      (function() {
+        try {
+          var nav = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation') : [];
+          var isReload = nav.length > 0 && nav[0].type === 'reload';
+          var alreadyLoaded = sessionStorage.getItem('el_manar_site_loaded');
+          if (alreadyLoaded && !isReload) {
+            document.getElementById('site-loader').style.display = 'none';
+          }
+        } catch (e) {}
+      })();
+    </script>
     <div class="loader-content">
       <div class="loader-logo">
-        <img src="assets/images/logo.png" alt="مدرسة المنار">
+        <img src="assets/images/logo.svg" alt="مدرسة المنار">
       </div>
       <div class="loader-slogan">
         <span class="loader-word word-1">جذور</span>
@@ -39,7 +51,7 @@
     <header class="nav">
       <div class="nav-inner">
         <a href="index.html" class="brand">
-          <img src="assets/images/logo.png" alt="مدرسة المنار" class="logo-img">
+          <img src="assets/images/logo.svg" alt="مدرسة المنار" class="logo-img">
           <span>مدرسة المنار</span>
         </a>
         <div class="mobile-toggle" id="mobile-toggle">☰</div>
@@ -113,36 +125,57 @@
     <!-- Floating Mathematical & Arabic Letters Background -->
     <div class="math-floating-bg">
       <!-- Left Side Floating Elements -->
-      <span class="math-item" style="top: 10%; left: 6%; animation-duration: 16s; animation-delay: 0s; font-size: 30px;">+</span>
-      <span class="math-item" style="top: 18%; left: 16%; animation-duration: 20s; animation-delay: -4s; font-size: 28px;">أ</span>
-      <span class="math-item" style="top: 28%; left: 8%; animation-duration: 18s; animation-delay: -7s; font-size: 22px;">1 + 1 = 2</span>
-      <span class="math-item" style="top: 38%; left: 19%; animation-duration: 22s; animation-delay: -2s; font-size: 27px;">ب</span>
-      <span class="math-item" style="top: 48%; left: 5%; animation-duration: 15s; animation-delay: -9s; font-size: 32px;">×</span>
-      <span class="math-item" style="top: 58%; left: 15%; animation-duration: 19s; animation-delay: -5s; font-size: 24px;">علم</span>
-      <span class="math-item" style="top: 68%; left: 8%; animation-duration: 24s; animation-delay: -11s; font-size: 26px;">√x</span>
-      <span class="math-item" style="top: 78%; left: 17%; animation-duration: 17s; animation-delay: -3s; font-size: 28px;">ض</span>
-      <span class="math-item" style="top: 86%; left: 6%; animation-duration: 21s; animation-delay: -8s; font-size: 30px;">÷</span>
+      <span class="math-item"
+        style="top: 10%; left: 6%; animation-duration: 16s; animation-delay: 0s; font-size: 30px;">+</span>
+      <span class="math-item"
+        style="top: 18%; left: 16%; animation-duration: 20s; animation-delay: -4s; font-size: 28px;">أ</span>
+      <span class="math-item"
+        style="top: 28%; left: 8%; animation-duration: 18s; animation-delay: -7s; font-size: 22px;">1 + 1 = 2</span>
+      <span class="math-item"
+        style="top: 38%; left: 19%; animation-duration: 22s; animation-delay: -2s; font-size: 27px;">ب</span>
+      <span class="math-item"
+        style="top: 48%; left: 5%; animation-duration: 15s; animation-delay: -9s; font-size: 32px;">×</span>
+      <span class="math-item"
+        style="top: 58%; left: 15%; animation-duration: 19s; animation-delay: -5s; font-size: 24px;">علم</span>
+      <span class="math-item"
+        style="top: 68%; left: 8%; animation-duration: 24s; animation-delay: -11s; font-size: 26px;">√x</span>
+      <span class="math-item"
+        style="top: 78%; left: 17%; animation-duration: 17s; animation-delay: -3s; font-size: 28px;">ض</span>
+      <span class="math-item"
+        style="top: 86%; left: 6%; animation-duration: 21s; animation-delay: -8s; font-size: 30px;">÷</span>
 
       <!-- Right Side Floating Elements -->
-      <span class="math-item" style="top: 12%; right: 7%; animation-duration: 18s; animation-delay: -2s; font-size: 25px;">اقرأ</span>
-      <span class="math-item" style="top: 22%; right: 18%; animation-duration: 23s; animation-delay: -6s; font-size: 22px;">π ≈ 3.14</span>
-      <span class="math-item" style="top: 32%; right: 9%; animation-duration: 16s; animation-delay: -10s; font-size: 28px;">ت</span>
-      <span class="math-item" style="top: 42%; right: 21%; animation-duration: 20s; animation-delay: -1s; font-size: 22px;">a + b = c</span>
-      <span class="math-item" style="top: 52%; right: 8%; animation-duration: 19s; animation-delay: -7s; font-size: 25px;">قلم</span>
-      <span class="math-item" style="top: 62%; right: 17%; animation-duration: 14s; animation-delay: -4s; font-size: 32px;">=</span>
-      <span class="math-item" style="top: 72%; right: 9%; animation-duration: 22s; animation-delay: -12s; font-size: 29px;">ن</span>
-      <span class="math-item" style="top: 82%; right: 19%; animation-duration: 17s; animation-delay: -5s; font-size: 26px;">%</span>
-      <span class="math-item" style="top: 88%; right: 8%; animation-duration: 21s; animation-delay: -9s; font-size: 28px;">ع</span>
+      <span class="math-item"
+        style="top: 12%; right: 7%; animation-duration: 18s; animation-delay: -2s; font-size: 25px;">اقرأ</span>
+      <span class="math-item"
+        style="top: 22%; right: 18%; animation-duration: 23s; animation-delay: -6s; font-size: 22px;">π ≈ 3.14</span>
+      <span class="math-item"
+        style="top: 32%; right: 9%; animation-duration: 16s; animation-delay: -10s; font-size: 28px;">ت</span>
+      <span class="math-item"
+        style="top: 42%; right: 21%; animation-duration: 20s; animation-delay: -1s; font-size: 22px;">a + b = c</span>
+      <span class="math-item"
+        style="top: 52%; right: 8%; animation-duration: 19s; animation-delay: -7s; font-size: 25px;">قلم</span>
+      <span class="math-item"
+        style="top: 62%; right: 17%; animation-duration: 14s; animation-delay: -4s; font-size: 32px;">=</span>
+      <span class="math-item"
+        style="top: 72%; right: 9%; animation-duration: 22s; animation-delay: -12s; font-size: 29px;">ن</span>
+      <span class="math-item"
+        style="top: 82%; right: 19%; animation-duration: 17s; animation-delay: -5s; font-size: 26px;">%</span>
+      <span class="math-item"
+        style="top: 88%; right: 8%; animation-duration: 21s; animation-delay: -9s; font-size: 28px;">ع</span>
 
       <!-- Top / Bottom Center Floating Elements -->
-      <span class="math-item" style="top: 8%; left: 45%; animation-duration: 25s; animation-delay: -13s; font-size: 26px;">س</span>
-      <span class="math-item" style="top: 14%; right: 42%; animation-duration: 18s; animation-delay: -8s; font-size: 24px;">x²</span>
-      <span class="math-item" style="top: 85%; left: 42%; animation-duration: 20s; animation-delay: -3s; font-size: 28px;">م</span>
-      <span class="math-item" style="top: 90%; right: 38%; animation-duration: 16s; animation-delay: -11s; font-size: 24px;">½</span>
+      <span class="math-item"
+        style="top: 8%; left: 45%; animation-duration: 25s; animation-delay: -13s; font-size: 26px;">س</span>
+      <span class="math-item"
+        style="top: 14%; right: 42%; animation-duration: 18s; animation-delay: -8s; font-size: 24px;">x²</span>
+      <span class="math-item"
+        style="top: 85%; left: 42%; animation-duration: 20s; animation-delay: -3s; font-size: 28px;">م</span>
+      <span class="math-item"
+        style="top: 90%; right: 38%; animation-duration: 16s; animation-delay: -11s; font-size: 24px;">½</span>
     </div>
 
     <div class="container">
-      <span class="eyebrow">تأسست عام 2001 – الحميز بلدية الدار البيضاء الجزائر</span>
       <h1>جذور راسخة<br>و <span class="hero-underline">آفاق واعدة</span></h1>
       <p>مؤسسة المنار للتربية والتعليم – بناء الإيمان والمعرفة والشخصية منذ 2001.</p>
 
@@ -243,7 +276,7 @@
             <button class="stage-link link-pink"> اكتشف المزيد ←</button>
           </div>
         </div>
-        <div class="stage-card" style="border: 2px solid var(--blue-500); box-shadow: var(--shadow-lg);">
+        <div class="stage-card">
           <div class="stage-photo blue">
             <img src="assets/images/cem.png" alt="الطور المتوسط">
           </div>
@@ -254,7 +287,7 @@
               <li><span class="check-icon">✓</span> تقوية التحصيل العلمي واللغات</li>
               <li><span class="check-icon">✓</span> مرافقة نفسية وسلوكية</li>
             </ul>
-            <button class="stage-link link-blue" style="background: var(--blue-500);">اكتشف المزيد ←</button>
+            <button class="stage-link link-blue">اكتشف المزيد ←</button>
           </div>
         </div>
         <div class="stage-card">
@@ -285,19 +318,19 @@
       </div>
       <div class="advantages-grid reveal reveal-stagger">
         <div class="adv-card">
-          <div class="adv-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+          <div class="adv-icon icon-purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 3v3M12 6c-3.5 0-6 2.5-6 6v7h12v-7c0-3.5-2.5-6-6-6z" />
               <path d="M9 19v-3a3 3 0 0 1 6 0v3" />
             </svg>
           </div>
           <h4>التأصيل الأخلاقي والديني</h4>
-          <p>ترسيم القيم الأصيلة والتربية الأخلاقية التفاعلية والتوجيه السلوكي النبيل.</p>
+          <p>ترسيخ القيم الأصيلة والتربية الأخلاقية التفاعلية والتوجيه السلوكي النبيل.</p>
         </div>
         <div class="adv-card">
-          <div class="adv-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+          <div class="adv-icon icon-blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               <path d="M9 12l2 2 4-4" />
@@ -307,8 +340,8 @@
           <p>توفير بيئة مدرسية آمنة ومحصنة تحت إشراف طاقم تربوي متميز يحرص على سلامة وانضباط الطلاب.</p>
         </div>
         <div class="adv-card">
-          <div class="adv-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+          <div class="adv-icon icon-green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
               <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
@@ -373,7 +406,8 @@
             <div class="news-body">
               <div class="news-date">📅 22 مايو 2026</div>
               <h4>دورة في الإسعافات الأولية</h4>
-              <p>نظمت ابتدائية المنار دورة في الاسعافات الأولية لفائدة تلاميذ السنة الخامسة، بمبادرة وإشراف المعلمة والدكتورة عميار هدى ، تحت شعار المسعف الصغير</p>
+              <p>نظمت ابتدائية المنار دورة في الاسعافات الأولية لفائدة تلاميذ السنة الخامسة، بمبادرة وإشراف المعلمة
+                والدكتورة عميار هدى ، تحت شعار المسعف الصغير</p>
               <button class="news-more">اقرأ المزيد ←</button>
             </div>
           </div>
@@ -399,7 +433,8 @@
             <div class="news-body">
               <div class="news-date">📅 1 سبتمبر 2026</div>
               <h4>زيارة مركز الكرامة لذوي الهمم</h4>
-              <p>نظّمت ابتدائية المنار زيارة لفائدة تلاميذ السنة الخامسة إلى #مركز_الكرامة. وقد هدفت هذه الزيارة إلى مدّ جسور التواصل والتعاون</p>
+              <p>نظّمت ابتدائية المنار زيارة لفائدة تلاميذ السنة الخامسة إلى #مركز_الكرامة. وقد هدفت هذه الزيارة إلى مدّ
+                جسور التواصل والتعاون</p>
               <button class="news-more">اقرأ المزيد ←</button>
             </div>
           </div>
@@ -414,7 +449,8 @@
             <div class="news-body">
               <div class="news-date">📅 22 مايو 2026</div>
               <h4>دورة في الإسعافات الأولية</h4>
-              <p>نظمت ابتدائية المنار دورة في الاسعافات الأولية لفائدة تلاميذ السنة الخامسة، بمبادرة وإشراف المعلمة والدكتورة عميار هدى ، تحت شعار المسعف الصغير</p>
+              <p>نظمت ابتدائية المنار دورة في الاسعافات الأولية لفائدة تلاميذ السنة الخامسة، بمبادرة وإشراف المعلمة
+                والدكتورة عميار هدى ، تحت شعار المسعف الصغير</p>
               <button class="news-more">اقرأ المزيد ←</button>
             </div>
           </div>
@@ -440,7 +476,8 @@
             <div class="news-body">
               <div class="news-date">📅 1 سبتمبر 2026</div>
               <h4>زيارة مركز الكرامة لذوي الهمم</h4>
-              <p>نظّمت ابتدائية المنار زيارة لفائدة تلاميذ السنة الخامسة إلى #مركز_الكرامة. وقد هدفت هذه الزيارة إلى مدّ جسور التواصل والتعاون</p>
+              <p>نظّمت ابتدائية المنار زيارة لفائدة تلاميذ السنة الخامسة إلى #مركز_الكرامة. وقد هدفت هذه الزيارة إلى مدّ
+                جسور التواصل والتعاون</p>
               <button class="news-more">اقرأ المزيد ←</button>
             </div>
           </div>
@@ -481,7 +518,7 @@
               <div class="contact-item-icon">📍</div>
               <div>
                 <div style="font-size:13px; color:#64748b;">العنوان</div>
-                <div>الحيين البيضاء – الجزائر العاصمة</div>
+                <div>الحميز، بلدية الدار البيضاء – الجزائر العاصمة</div>
               </div>
             </div>
           </div>
@@ -524,7 +561,7 @@
       <div class="foot-grid">
         <div>
           <div class="foot-brand">
-            <img src="assets/images/logo.png" alt="مدرسة المنار" class="foot-logo-img">
+            <img src="assets/images/logo.svg" alt="مدرسة المنار" class="foot-logo-img">
             <span>مدرسة المنار</span>
           </div>
           <p style="margin-top:12px; color:#8f9dc4;">مؤسسة تعليمية رائدة منذ 2001، تجمع بين التعليم الأكاديمي المتميز

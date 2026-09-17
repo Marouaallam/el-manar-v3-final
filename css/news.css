@@ -1,5 +1,6 @@
 /* =============================================
    EL MANAR – News & Blog Styles (news.css)
+   Neubrutalism Design System
    ============================================= */
 
 .news-page-section {
@@ -21,44 +22,57 @@
 }
 
 .news-filter-bar .filter-pill {
-  padding: 10px 24px;
-  border-radius: 999px;
-  background: #f1f5f9;
-  color: #334155;
+  padding: 10px 22px;
+  border-radius: var(--brutal-radius-pill, 9999px);
+  background: #ffffff;
+  color: var(--brutal-border-color, #0d1527);
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  border: 1.5px solid transparent;
-  transition: all 0.25s ease;
+  border: var(--brutal-border-width-sm, 2px) solid var(--brutal-border-color, #0d1527);
+  box-shadow: 3.5px 3.5px 0px var(--brutal-border-color, #0d1527);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, color 0.2s ease;
 }
 
-.news-filter-bar .filter-pill:hover,
+.news-filter-bar .filter-pill:hover {
+  transform: translate(-2.5px, -2.5px);
+  box-shadow: 6px 6px 0px var(--brutal-border-color, #0d1527);
+  background: var(--blue-50, #f0f7ff);
+}
+
 .news-filter-bar .filter-pill.active {
-  background: var(--blue-500);
+  background: var(--blue-600, #1460bb);
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(21, 101, 192, 0.3);
+  transform: translate(-2.5px, -2.5px);
+  box-shadow: 6px 6px 0px var(--brutal-border-color, #0d1527);
+}
+
+.news-filter-bar .filter-pill:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1.5px 1.5px 0px var(--brutal-border-color, #0d1527);
 }
 
 .news-archive-card {
-  background: #ffffff;
-  border-radius: 24px;
+  background: var(--brutal-card-bg, #fcfaff);
+  border-radius: var(--brutal-radius-card, 24px);
   overflow: hidden;
-  border: 1px solid rgba(21, 99, 188, 0.12);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: var(--brutal-border-width, 3px) solid var(--brutal-border-color, #0d1527);
+  box-shadow: var(--brutal-shadow, 6px 6px 0px #0d1527);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .news-archive-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 42px rgba(21, 99, 188, 0.12);
+  transform: translate(-4px, -4px);
+  box-shadow: var(--brutal-shadow-hover, 10px 10px 0px #0d1527);
 }
 
 .news-archive-photo {
   height: 220px;
   position: relative;
   overflow: hidden;
+  border-bottom: var(--brutal-border-width, 3px) solid var(--brutal-border-color, #0d1527);
 }
 
 .news-archive-photo img {
@@ -69,20 +83,21 @@
 }
 
 .news-archive-card:hover .news-archive-photo img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .news-archive-tag {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  color: var(--blue-700);
+  background: #ffffff;
+  color: var(--blue-800, #0f54b0);
   font-weight: 800;
   font-size: 13px;
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: var(--brutal-radius-pill, 9999px);
+  border: 1.5px solid var(--brutal-border-color, #0d1527);
+  box-shadow: 2px 2px 0px var(--brutal-border-color, #0d1527);
 }
 
 .news-archive-body {
@@ -105,28 +120,42 @@
   color: #072659;
   margin-bottom: 12px;
   line-height: 1.4;
+  font-weight: 800;
 }
 
 .news-archive-body p {
   font-size: 15px;
-  color: #556885;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  color: #475569;
+  line-height: 1.65;
+  margin-bottom: 24px;
 }
 
 .btn-read-news {
-  color: var(--blue-600);
+  color: var(--blue-800, #0f54b0);
+  background: var(--blue-50, #f0f7ff);
   font-weight: 800;
-  font-size: 15px;
+  font-size: 14.5px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  transition: gap 0.2s ease;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--brutal-radius-pill, 9999px);
+  border: var(--brutal-border-width-sm, 2px) solid var(--brutal-border-color, #0d1527);
+  box-shadow: 2.5px 2.5px 0px var(--brutal-border-color, #0d1527);
+  width: fit-content;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .btn-read-news:hover {
-  gap: 10px;
-  color: var(--blue-800);
+  background: var(--blue-100, #e3f2fd);
+  transform: translate(-2px, -2px);
+  box-shadow: 4.5px 4.5px 0px var(--brutal-border-color, #0d1527);
+}
+
+.btn-read-news:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1.5px 1.5px 0px var(--brutal-border-color, #0d1527);
 }
 
 @media (max-width: 900px) {

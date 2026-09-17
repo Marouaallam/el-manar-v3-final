@@ -32,16 +32,16 @@
 
 .feature-item-box {
   background: #ffffff;
-  padding: 22px 20px;
-  border-radius: 20px;
-  border: 1px solid rgba(21, 101, 192, 0.1);
-  box-shadow: 0 8px 24px rgba(7, 38, 89, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 24px 22px;
+  border-radius: var(--brutal-radius-card, 20px);
+  border: var(--brutal-border-width-sm, 2px) solid var(--brutal-border-color, #0d1527);
+  box-shadow: 4px 4px 0px var(--brutal-border-color, #0d1527);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .feature-item-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(21, 101, 192, 0.1);
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px var(--brutal-border-color, #0d1527);
 }
 
 .feature-item-box h4 {
@@ -61,7 +61,7 @@
 .other-stages-block {
   margin-top: 40px;
   padding-top: 35px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 2px solid var(--brutal-border-color, #0d1527);
 }
 
 .stages-nav-grid {
@@ -75,10 +75,10 @@
   background: #ffffff;
   border-radius: 16px;
   padding: 20px 16px;
-  border: 1px solid rgba(21, 101, 192, 0.12);
+  border: var(--brutal-border-width-sm, 2px) solid var(--brutal-border-color, #0d1527);
   text-align: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0px var(--brutal-border-color, #0d1527);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,16 +87,15 @@
 }
 
 .stage-nav-card:hover {
-  transform: translateY(-4px);
-  border-color: #1565C0;
-  box-shadow: 0 12px 28px rgba(21, 101, 192, 0.12);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--brutal-border-color, #0d1527);
 }
 
 .stage-nav-card.active {
-  background: #1565C0;
+  background: var(--blue-600, #1565C0);
   color: #ffffff;
-  border-color: #1565C0;
-  box-shadow: 0 8px 24px rgba(21, 101, 192, 0.25);
+  border-color: var(--brutal-border-color, #0d1527);
+  box-shadow: 4px 4px 0px var(--brutal-border-color, #0d1527);
 }
 
 .stage-nav-card h4 {
