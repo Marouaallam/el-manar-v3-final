@@ -1,0 +1,135 @@
+/* =============================================
+   EL MANAR – ربع قرن (anniversary.html) – simple reading layout
+   ============================================= */
+
+.an-page {
+  padding: 70px 24px 90px;
+}
+
+.an-column {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.an-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.an-badges img:first-child {
+  width: 150px;
+}
+
+.an-badges img:last-child {
+  width: 160px;
+}
+
+.an-quote {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 600;
+  color: #072659;
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.an-quote cite {
+  display: block;
+  margin-top: 12px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--blue-700);
+}
+
+.an-column h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--blue-800);
+  margin: 40px 0 12px;
+}
+
+.an-column p {
+  font-size: 17.5px;
+  line-height: 2.05;
+  color: #2b3a5c;
+}
+
+/* simple timeline: a line with dots, no boxes */
+.an-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 22px 0 0;
+  border-right: 2px solid #dbe4f1;
+}
+
+.an-timeline li {
+  position: relative;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #2b3a5c;
+  padding: 6px 0;
+}
+
+.an-timeline li::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: -29px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--blue-600);
+}
+
+.an-timeline span {
+  font-weight: 800;
+  color: var(--blue-700);
+  margin-left: 12px;
+}
+
+.an-cta {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.an-cta a {
+  display: inline-block;
+  background: var(--blue-600);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 13px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color .2s ease;
+}
+
+.an-cta a:hover {
+  background: var(--blue-800);
+}
+
+@media (max-width: 640px) {
+  .an-page {
+    padding: 48px 16px 70px;
+  }
+
+  .an-badges img:first-child {
+    width: 110px;
+  }
+
+  .an-badges img:last-child {
+    width: 120px;
+  }
+
+  .an-quote {
+    font-size: 17.5px;
+  }
+
+  .an-column p {
+    font-size: 16.5px;
+  }
+}

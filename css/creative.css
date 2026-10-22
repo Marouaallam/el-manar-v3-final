@@ -1,0 +1,1027 @@
+/* =============================================
+   EL MANAR – فضاء الإبداع (creative space) pages
+   Shared by: student-creations, contributions, publications, role-models
+   ============================================= */
+
+.cs-section {
+  padding: 64px 24px 90px;
+  background: #f7f9fd;
+}
+
+.cs-section.white {
+  background: #ffffff;
+}
+
+.cs-intro {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.cs-intro h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #072659;
+  margin-bottom: 8px;
+}
+
+.cs-intro p {
+  color: #556885;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ── Filter chips ── */
+.cs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.cs-chip {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3b4673;
+  background: #ffffff;
+  border: 1px solid #dbe4f1;
+  border-radius: 999px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.cs-chip:hover {
+  border-color: var(--blue-500);
+  color: var(--blue-700);
+}
+
+.cs-chip.active {
+  background: var(--blue-600);
+  border-color: var(--blue-600);
+  color: #ffffff;
+}
+
+.cs-empty {
+  display: none;
+  text-align: center;
+  color: #8492b4;
+  padding: 40px 0;
+}
+
+/* ── Generic card ── */
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cs-card {
+  background: #ffffff;
+  border: 1px solid #e3e9f3;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(7, 38, 89, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cs-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(7, 38, 89, 0.12);
+}
+
+.cs-card-media {
+  height: 200px;
+  overflow: hidden;
+  background: #eaf2fc;
+}
+
+.cs-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cs-card-body {
+  padding: 22px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.cs-tag {
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue-700);
+  background: #eaf2fc;
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.cs-tag.green {
+  color: #145c2a;
+  background: #e6f4ea;
+}
+
+.cs-tag.gold {
+  color: #8a5a00;
+  background: #fff4d6;
+}
+
+.cs-card h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #072659;
+  line-height: 1.45;
+}
+
+.cs-card p {
+  font-size: 15px;
+  color: #556885;
+  line-height: 1.75;
+}
+
+.cs-meta {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #eef2f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #8492b4;
+}
+
+.cs-link {
+  font-weight: 700;
+  color: var(--blue-600);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cs-link:hover {
+  color: var(--blue-900);
+}
+
+/* Icon media (when there is no photo) */
+.cs-media-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+}
+
+.cs-media-icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+.cs-media-icon.gold {
+  background: linear-gradient(135deg, #fff4d6, #ffe4a3);
+  color: #b07700;
+}
+
+.cs-media-icon.blue {
+  background: linear-gradient(135deg, #eaf2fc, #cfe1f8);
+  color: var(--blue-700);
+}
+
+/* Small portrait photos: shown whole at natural height on a soft background */
+.cs-media-photo {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    url('../assets/background-blue.svg') center / 400px auto repeat,
+    linear-gradient(135deg, #fff8e6, #fdecc4);
+}
+
+.cs-media-photo img {
+  width: auto;
+  height: 190px;
+  max-width: 90%;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 24px rgba(7, 25, 56, 0.18);
+}
+
+/* Quote-style card (خواطر) */
+.cs-card.quote .cs-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: linear-gradient(135deg, #0f54b0, #1e88e5);
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ── Call to action band ── */
+.cs-cta {
+  margin-top: 56px;
+  background:
+    url('../assets/background-white.svg') center / 600px auto repeat,
+    linear-gradient(135deg, #072659 0%, #0f54b0 45%, #1565C0 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cs-cta h3 {
+  font-size: 23px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.cs-cta p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+}
+
+.cs-cta a {
+  background: #ffffff;
+  color: var(--blue-800);
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .2s ease;
+}
+
+.cs-cta a:hover {
+  transform: translateY(-2px);
+}
+
+/* ── Award band (وسام التميز) ── */
+.cs-award {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #f3e2b3;
+  border-radius: 24px;
+  padding: 32px 36px;
+  box-shadow: 0 10px 30px rgba(138, 90, 0, 0.06);
+}
+
+.cs-award-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #fff4d6;
+  color: #c08400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-award-icon svg {
+  width: 44px;
+  height: 44px;
+}
+
+.cs-award h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #072659;
+  margin-bottom: 6px;
+}
+
+.cs-award p {
+  color: #556885;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ── Articles list (إسهامات فكرية) ── */
+.cs-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.cs-article {
+  background: #ffffff;
+  border: 1px solid #e3e9f3;
+  border-radius: 20px;
+  padding: 26px 30px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 22px;
+  box-shadow: 0 10px 30px rgba(7, 38, 89, 0.05);
+  transition: box-shadow .25s ease, border-color .25s ease;
+}
+
+.cs-article:hover {
+  border-color: #c9d8ee;
+  box-shadow: 0 16px 36px rgba(7, 38, 89, 0.1);
+}
+
+.cs-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #eaf2fc;
+  color: var(--blue-700);
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-article h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #072659;
+  line-height: 1.5;
+  margin: 8px 0 6px;
+}
+
+.cs-article p {
+  color: #556885;
+  font-size: 15.5px;
+  line-height: 1.8;
+}
+
+/* full article toggle */
+.cs-full {
+  margin-top: 10px;
+}
+
+.cs-full summary {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--blue-600);
+  list-style: none;
+}
+
+.cs-full summary::-webkit-details-marker {
+  display: none;
+}
+
+.cs-full summary::after {
+  content: ' ▾';
+}
+
+.cs-full[open] summary::after {
+  content: ' ▴';
+}
+
+.cs-full p {
+  margin-top: 12px;
+  padding: 18px 20px;
+  background: #f7f9fd;
+  border-radius: 14px;
+  font-size: 16.5px;
+  line-height: 2.1;
+  color: #2b3a5c;
+}
+
+/* hide the short excerpt once the full text is open */
+.cs-article div:has(> .cs-full[open]) > p {
+  display: none;
+}
+
+.cs-article .cs-meta {
+  border-top: none;
+  padding-top: 12px;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+/* ── Book covers (إصدارات) ── */
+.cs-books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.cs-book {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cs-cover {
+  aspect-ratio: 3 / 4;
+  border-radius: 6px 16px 16px 6px;
+  padding: 26px 22px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(7, 38, 89, 0.18);
+  transition: transform .25s ease;
+}
+
+.cs-book:hover .cs-cover {
+  transform: translateY(-6px) rotate(-1deg);
+}
+
+/* book spine */
+.cs-cover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.cs-cover small {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: .85;
+}
+
+.cs-cover strong {
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.cs-cover img {
+  width: 44px;
+  height: auto;
+  opacity: .95;
+}
+
+.cs-cover.blue { background: linear-gradient(160deg, #1565C0, #072659); }
+.cs-cover.green { background: linear-gradient(160deg, #2e9a4f, #145c2a); }
+.cs-cover.sky { background: linear-gradient(160deg, #0ea5e9, #075985); }
+.cs-cover.navy { background: linear-gradient(160deg, #334155, #0b1f44); }
+
+a.cs-book {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs-book .cs-tag {
+  margin-top: 2px;
+}
+
+/* real cover photo, same frame as the drawn covers */
+.cs-cover-img {
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3e9f3;
+  box-shadow: 0 18px 36px rgba(7, 38, 89, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s ease;
+}
+
+.cs-cover-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cs-book:hover .cs-cover-img {
+  transform: translateY(-6px) rotate(-1deg);
+}
+
+.cs-book h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #072659;
+  line-height: 1.5;
+}
+
+.cs-book p {
+  font-size: 14.5px;
+  color: #556885;
+  line-height: 1.7;
+}
+
+/* Featured book */
+.cs-feature-book {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e3e9f3;
+  border-radius: 26px;
+  padding: 36px 44px;
+  box-shadow: 0 14px 40px rgba(7, 38, 89, 0.07);
+}
+
+.cs-feature-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cs-feature-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cs-feature-info h3 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #072659;
+}
+
+.cs-series {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--blue-700);
+}
+
+.cs-feature-info p {
+  font-size: 16.5px;
+  line-height: 2;
+  color: #556885;
+}
+
+/* ── Clickable profile card + woman icon ── */
+a.cs-profile {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs-profile .cs-link {
+  margin-top: 6px;
+}
+
+.cs-profile-icon {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(13, 71, 161, 0.15);
+}
+
+.cs-profile-icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+/* ── Details page (e.g. role-model-aicha.html) ── */
+.cs-detail {
+  padding: 64px 24px 90px;
+}
+
+.cs-detail-column {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.cs-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #e3e9f3;
+}
+
+.cs-detail-icon {
+  flex-shrink: 0;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #eaf2fc;
+  color: var(--blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-detail-icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+.cs-detail-sub {
+  font-size: 19px;
+  font-weight: 800;
+  color: #072659;
+  margin-bottom: 6px;
+}
+
+.cs-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 14.5px;
+  color: #8492b4;
+}
+
+.cs-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.cs-facts li {
+  background: #f7f9fd;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 15.5px;
+  color: #2b3a5c;
+}
+
+.cs-facts strong {
+  display: block;
+  font-size: 13px;
+  color: var(--blue-700);
+  margin-bottom: 2px;
+}
+
+.cs-detail-column > p {
+  font-size: 18px;
+  line-height: 2.1;
+  color: #2b3a5c;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.cs-detail-links {
+  margin-top: 36px;
+  padding-top: 26px;
+  border-top: 1px solid #e3e9f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cs-detail-btn {
+  background: var(--blue-600);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15.5px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color .2s ease;
+}
+
+.cs-detail-btn:hover {
+  background: var(--blue-800);
+}
+
+@media (max-width: 640px) {
+  .cs-detail {
+    padding: 44px 16px 70px;
+  }
+
+  .cs-detail-head {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cs-detail-meta {
+    justify-content: center;
+  }
+
+  .cs-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-detail-column > p {
+    font-size: 16.5px;
+    text-align: right;
+  }
+
+  .cs-detail-links {
+    justify-content: center;
+  }
+}
+
+/* generic details page extras */
+/* picture on the right, same fixed frame for every item */
+.cs-detail-head.with-image {
+  gap: 32px;
+}
+
+.ci-image {
+  flex-shrink: 0;
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+  background: #f7f9fd;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(7, 38, 89, 0.15);
+}
+
+/* book covers: show the whole picture inside the frame */
+.ci-image.is-contain {
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+  border: 1px solid #e3e9f3;
+  padding: 12px;
+}
+
+.cs-detail-head.with-image .cs-detail-sub {
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .ci-image {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+.ci-missing {
+  text-align: center;
+  font-size: 18px;
+  color: #556885;
+}
+
+/* featured person (نماذج ملهمة) reuses the featured-book layout */
+.cs-feature-person .cs-feature-info h3 {
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+.cs-feature-person .cs-feature-info h3 small {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue-700);
+}
+
+.cs-feature-person .cs-feature-info p {
+  color: #2b3a5c;
+  text-align: justify;
+}
+
+.cs-book-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 860px) {
+  .cs-feature-book {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 22px;
+    text-align: center;
+  }
+
+  .cs-feature-cover img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .cs-feature-info {
+    align-items: center;
+  }
+
+  .cs-feature-info h3 {
+    font-size: 27px;
+  }
+}
+
+/* ── Profiles (نماذج ملهمة) ── */
+.cs-profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cs-profile {
+  background: #ffffff;
+  border: 1px solid #e3e9f3;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(7, 38, 89, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cs-profile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(7, 38, 89, 0.12);
+}
+
+/* photo area: an <img> fills it; until then the initial shows as a placeholder */
+.cs-profile-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background:
+    url('../assets/background-blue.svg') center / 400px auto repeat,
+    linear-gradient(160deg, #eaf2fc, #d6e6fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cs-profile-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.cs-profile-initial {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--blue-700);
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(13, 71, 161, 0.15);
+}
+
+.cs-profile-body {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cs-profile-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.cs-profile-head .cs-avatar {
+  width: 56px;
+  height: 56px;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.cs-profile h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #072659;
+}
+
+.cs-profile .years {
+  font-size: 14px;
+  color: #8492b4;
+}
+
+.cs-profile p {
+  font-size: 15px;
+  color: #556885;
+  line-height: 1.8;
+}
+
+/* ── Video album ── */
+.cs-video .cs-card-media {
+  position: relative;
+  height: 210px;
+  display: block;
+}
+
+.cs-video .cs-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 25, 56, 0.05) 30%, rgba(7, 25, 56, 0.55) 100%);
+}
+
+.cs-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 62px;
+  height: 62px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 26px rgba(7, 25, 56, 0.3);
+  transition: transform .25s ease;
+}
+
+.cs-play svg {
+  width: 24px;
+  height: 24px;
+  margin-right: -3px;
+}
+
+.cs-video:hover .cs-play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.cs-duration {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(7, 25, 56, 0.7);
+  border-radius: 8px;
+  padding: 2px 9px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1000px) {
+  .cs-grid,
+  .cs-profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs-books {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-section {
+    padding: 48px 16px 70px;
+  }
+
+  .cs-grid,
+  .cs-profiles {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-books {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .cs-cover strong {
+    font-size: 16px;
+  }
+
+  .cs-article {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .cs-award {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .cs-cta {
+    padding: 28px 22px;
+    text-align: center;
+    justify-content: center;
+  }
+}

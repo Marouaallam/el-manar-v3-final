@@ -61,7 +61,7 @@
 .other-stages-block {
   margin-top: 40px;
   padding-top: 35px;
-  border-top: 2px solid var(--brutal-border-color, #0d1527);
+  border-top: 1px solid var(--brutal-border-color, #0d1527);
 }
 
 .stages-nav-grid {

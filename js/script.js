@@ -79,40 +79,6 @@ const initStatCounters = () => {
   statNumbers.forEach(num => statsObserver.observe(num));
 };
 
-// Site Preloader Animation
-const initPreloader = () => {
-  const loader = document.getElementById('site-loader');
-  if (!loader) return;
-
-  try {
-    const navEntries = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation') : [];
-    const isReload = navEntries.length > 0 && navEntries[0].type === 'reload';
-    const alreadyLoaded = sessionStorage.getItem('el_manar_site_loaded');
-
-    // If already visited in this session and NOT a manual page reload, skip loader completely
-    if (alreadyLoaded && !isReload) {
-      loader.style.display = 'none';
-      loader.classList.add('fade-out');
-      document.body.style.overflow = '';
-      return;
-    }
-
-    // Set flag in session storage for subsequent navigations
-    sessionStorage.setItem('el_manar_site_loaded', 'true');
-  } catch (e) {}
-
-  // Lock scroll during preloader animation
-  document.body.style.overflow = 'hidden';
-
-  setTimeout(() => {
-    loader.classList.add('fade-out');
-    document.body.style.overflow = '';
-    setTimeout(() => {
-      loader.style.display = 'none';
-    }, 800);
-  }, 2300);
-};
-
 // Smooth scroll to top when clicking home/brand links while already on the landing page
 const initHomeNavScroll = () => {
   const isIndexPage = window.location.pathname.endsWith('index.html') || 
@@ -214,18 +180,48 @@ const initPageTransitions = () => {
   });
 };
 
+// Scattered gallery cards straighten as the gallery scrolls up into view
+const initGalleryScatter = () => {
+  const gallery = document.querySelector('.gallery-scatter');
+  if (!gallery) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    gallery.style.setProperty('--k', 0);
+    return;
+  }
+
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const vh = window.innerHeight;
+    const top = gallery.getBoundingClientRect().top;
+    // top at bottom of screen → fully scattered (1); top at 35% of screen → aligned (0)
+    const k = Math.min(1, Math.max(0, (top - vh * 0.35) / (vh * 0.65)));
+    gallery.style.setProperty('--k', k.toFixed(3));
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+};
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    initPreloader();
     initStatCounters();
     initHomeNavScroll();
     initPageTransitions();
+    initGalleryScatter();
   });
 } else {
-  initPreloader();
   initStatCounters();
   initHomeNavScroll();
   initPageTransitions();
+  initGalleryScatter();
 }
 
 

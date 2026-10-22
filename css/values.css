@@ -15,13 +15,13 @@
   border-radius: var(--brutal-radius-card, 24px);
   padding: 36px 28px;
   border: var(--brutal-border-width, 3px) solid var(--brutal-border-color, #0d1527);
-  box-shadow: var(--brutal-shadow, 6px 6px 0px #0d1527);
+  box-shadow: var(--brutal-shadow, 3px 3px 0px #0d1527);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .value-card-box:hover {
   transform: translate(-4px, -4px);
-  box-shadow: var(--brutal-shadow-hover, 10px 10px 0px #0d1527);
+  box-shadow: var(--brutal-shadow-hover, 5px 5px 0px #0d1527);
 }
 
 .value-card-box h3 {
