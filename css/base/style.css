@@ -488,7 +488,7 @@ nav.menu ul li:hover::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../assets/background.svg');
+  background-image: url('../../assets/patterns/background.svg');
   background-size: 600px auto;
   background-position: center;
   background-repeat: repeat;
@@ -866,7 +866,7 @@ nav.menu ul li:hover::after {
 /* ── Subpage Hero Banner ── */
 .subpage-hero {
   background:
-    url('../assets/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
     linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
   color: #ffffff;
   padding: 85px 28px 75px;
@@ -1097,7 +1097,7 @@ nav.menu ul li:hover::after {
   max-width: 900px;
   padding: 44px 40px 40px;
   background:
-    url('../assets/background-blue.svg') center / 600px auto repeat,
+    url('../../assets/patterns/background-blue.svg') center / 600px auto repeat,
     #ffffff;
   border: 1px solid #e3e9f3;
   border-radius: 28px;
@@ -1310,7 +1310,7 @@ nav.menu ul li:hover::after {
 /* ── Stats (Blue Banner) ── */
 .stats {
   background:
-    url('../assets/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
     linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
   padding: 80px 24px;
   position: relative;
@@ -1646,7 +1646,7 @@ nav.menu ul li:hover::after {
 /* ── Advantages Section (Blue Banner) ── */
 .advantages {
   background:
-    url('../assets/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
     linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
   padding: 90px 24px;
   color: #fff;
@@ -2005,7 +2005,7 @@ nav.menu ul li:hover::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../assets/background-white.svg') center / 500px auto repeat;
+  background: url('../../assets/patterns/background-white.svg') center / 500px auto repeat;
   pointer-events: none;
 }
 
@@ -2163,6 +2163,45 @@ nav.menu ul li:hover::after {
   }
 }
 
+/* book cover standing large on the left of the card, text on the right */
+.ch-rotating.has-side-image .ch-visual.is-image {
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 42%;
+  max-width: 190px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.ch-rotating.has-side-image .ch-visual.is-image img {
+  border-radius: 0;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.35));
+}
+
+.ch-rotating.has-side-image .ch-photo-text {
+  padding-left: min(46%, 215px);
+}
+
+.ch-rotating.has-side-image h4 {
+  font-size: 22px;
+}
+
+/* the large إبداعات card keeps the cover centred above the text */
+.ch-rotating.ch-creations.has-side-image .ch-visual.is-image {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 220px;
+  max-width: 60%;
+}
+
+.ch-rotating.ch-creations.has-side-image .ch-photo-text {
+  padding-left: 24px;
+}
+
 /* example photo filling the whole card, text on a dark fade */
 .ch-rotating .ch-visual.is-cover,
 .ch-rotating.ch-creations .ch-visual.is-cover {
@@ -2253,7 +2292,7 @@ nav.menu ul li:hover::after {
 
 .ch-play {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   z-index: 1;
   width: 58px;
@@ -2313,7 +2352,7 @@ nav.menu ul li:hover::after {
 /* ── News ── */
 .news {
   background:
-    url('../assets/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
     linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
   padding: 100px 24px;
 }
@@ -2673,7 +2712,7 @@ nav.menu ul li:hover::after {
 /* ── Footer ── */
 footer {
   background:
-    url('../assets/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
     linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
   color: #d0e1fd;
   padding: 64px 24px 28px;

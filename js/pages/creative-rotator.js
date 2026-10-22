@@ -74,15 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item.image && item.fit !== 'contain') {
           // photos fill the whole card
           visual.className = 'ch-visual is-cover';
-          visual.innerHTML = `<img src="${item.image}" alt="">`;
+          visual.innerHTML = `<img src="${window.siteUrl(item.image)}" alt="">`;
         } else if (item.image) {
           // book covers etc. stay whole in a small frame
           visual.className = 'ch-visual is-image';
-          visual.innerHTML = `<img src="${item.image}" alt="">`;
+          visual.innerHTML = `<img src="${window.siteUrl(item.image)}" alt="">`;
         } else {
           visual.className = 'ch-visual is-icon';
           visual.innerHTML = window.CREATIVE_ICONS[item.icon] || window.CREATIVE_ICONS.pen;
         }
+        // book covers stand large on the side; text keeps to the other side
+        card.classList.toggle('has-side-image', Boolean(item.image && !item.lowres && item.fit === 'contain'));
         card.href = window.creativeItemUrl(item);
         dots.forEach((d, n) => d.classList.toggle('active', n === current));
         card.classList.remove('is-changing');

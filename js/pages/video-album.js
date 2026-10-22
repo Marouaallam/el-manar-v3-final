@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const card = (v) => `
     <a class="yt-card" href="${window.videoUrl(v)}" data-cat="${v.category}">
       <div class="yt-thumb">
-        <img src="${esc(v.thumb)}" alt="" loading="lazy">
+        <img src="${esc(window.siteUrl(v.thumb))}" alt="" loading="lazy">
         <span class="yt-duration">${esc(v.duration)}</span>
       </div>
       <div class="yt-info">
-        <img class="yt-avatar" src="assets/images/logo.svg" alt="">
+        <img class="yt-avatar" src="${window.siteUrl('assets/images/logos/logo.svg')}" alt="">
         <div>
           <h3 class="yt-title">${esc(v.title)}</h3>
           <p class="yt-meta">مدرسة المنار · ${esc(window.VIDEO_CATEGORIES[v.category] || '')}</p>

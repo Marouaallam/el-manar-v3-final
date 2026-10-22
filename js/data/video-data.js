@@ -8,6 +8,9 @@
  *   thumb     thumbnail image
  *   category  one of the keys in VIDEO_CATEGORIES
  */
+/* Site root, worked out from this file's own URL (…/js/data/<file>.js), so paths work from any page folder */
+window.SITE_ROOT = window.SITE_ROOT || ((document.currentScript && document.currentScript.src.replace(/js\/data\/[^/]+$/, '')) || '');
+window.siteUrl = window.siteUrl || ((p) => window.SITE_ROOT + p);
 window.VIDEO_CATEGORIES = {
   events: 'حفلات ومناسبات',
   activities: 'أنشطة',
@@ -23,7 +26,7 @@ window.VIDEOS = [
     title: 'حفل نهاية السنة الدراسية',
     category: 'events',
     duration: '3:45',
-    thumb: 'assets/images/life6.jpeg',
+    thumb: 'assets/images/life/life6.jpeg',
     description: 'لقطات من حفل تكريم المتفوقين وفقرات التلاميذ الفنية.'
   },
   {
@@ -32,7 +35,7 @@ window.VIDEOS = [
     title: 'ورشة الرسم والألوان',
     category: 'activities',
     duration: '2:10',
-    thumb: 'assets/images/life3.jpeg',
+    thumb: 'assets/images/life/life3.jpeg',
     description: 'تلاميذ الطور الابتدائي في ورشة فنية للتعبير بالألوان.'
   },
   {
@@ -41,7 +44,7 @@ window.VIDEOS = [
     title: 'الدورة الرياضية المدرسية',
     category: 'sports',
     duration: '4:30',
-    thumb: 'assets/images/life2.jpeg',
+    thumb: 'assets/images/life/life2.jpeg',
     description: 'أجواء المنافسة والروح الرياضية في دورة كرة القدم بين الأقسام.'
   },
   {
@@ -50,7 +53,7 @@ window.VIDEOS = [
     title: 'عرض مشروع نادي العلوم',
     category: 'creations',
     duration: '1:55',
-    thumb: 'assets/images/life5.jpeg',
+    thumb: 'assets/images/life/life5.jpeg',
     description: 'تلاميذ نادي العلوم يشرحون مشروعهم حول الطاقة المتجددة.'
   },
   {
@@ -59,7 +62,7 @@ window.VIDEOS = [
     title: 'ورشة الطاهي الصغير',
     category: 'activities',
     duration: '2:40',
-    thumb: 'assets/images/life1.jpeg',
+    thumb: 'assets/images/life/life1.jpeg',
     description: 'تجربة ممتعة في الطبخ والعمل الجماعي لتلاميذ الابتدائي.'
   },
   {
@@ -68,10 +71,10 @@ window.VIDEOS = [
     title: 'ربع قرن من العطاء',
     category: 'events',
     duration: '5:05',
-    thumb: 'assets/images/life0.jpeg',
+    thumb: 'assets/images/life/life0.jpeg',
     description: 'فيديو بمناسبة الذكرى الخامسة والعشرين لانطلاق التعليم بمركب المنار.'
   }
 ];
 
-window.videoUrl = (v) => `video-watch.html?v=${encodeURIComponent(v.id)}`;
+window.videoUrl = (v) => window.siteUrl(`pages/creative/video-watch.html?v=${encodeURIComponent(v.id)}`);
 window.videoEsc = (s) => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));

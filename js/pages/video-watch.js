@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ? `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.youtube)}?autoplay=1&rel=0"
          title="${esc(video.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
          allowfullscreen></iframe>`
-    : `<img src="${esc(video.thumb)}" alt="">
+    : `<img src="${esc(window.siteUrl(video.thumb))}" alt="">
        <div class="yt-soon">
          <span class="yt-soon-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
          <span>سيتم نشر هذا الفيديو قريباً</span>
@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
   details.innerHTML = `
     <h1 class="yt-watch-title">${esc(video.title)}</h1>
     <div class="yt-channel">
-      <img class="yt-avatar" src="assets/images/logo.svg" alt="">
+      <img class="yt-avatar" src="${window.siteUrl('assets/images/logos/logo.svg')}" alt="">
       <div>
         <strong>مدرسة المنار</strong>
         <span>${esc(category)}</span>
       </div>
-      <a href="video-album.html" class="yt-back">ألبوم الفيديو ←</a>
+      <a href="${window.siteUrl('pages/creative/video-album.html')}" class="yt-back">ألبوم الفيديو ←</a>
     </div>
     <div class="yt-description">
       <span class="yt-desc-meta">${esc(category)} · ${esc(video.duration)}</span>
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   list.innerHTML = others.map(v => `
     <a class="yt-next" href="${window.videoUrl(v)}">
       <div class="yt-thumb">
-        <img src="${esc(v.thumb)}" alt="" loading="lazy">
+        <img src="${esc(window.siteUrl(v.thumb))}" alt="" loading="lazy">
         <span class="yt-duration">${esc(v.duration)}</span>
       </div>
       <div>

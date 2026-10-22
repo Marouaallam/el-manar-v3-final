@@ -201,7 +201,7 @@
   align-items: center;
   justify-content: center;
   background:
-    url('../assets/background-blue.svg') center / 400px auto repeat,
+    url('../../assets/patterns/background-blue.svg') center / 400px auto repeat,
     linear-gradient(135deg, #fff8e6, #fdecc4);
 }
 
@@ -233,7 +233,7 @@
 .cs-cta {
   margin-top: 56px;
   background:
-    url('../assets/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
     linear-gradient(135deg, #072659 0%, #0f54b0 45%, #1565C0 100%);
   color: #ffffff;
   border-radius: 24px;
@@ -773,6 +773,29 @@ a.cs-profile {
   }
 }
 
+.ci-heading {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--blue-800);
+  margin: 30px 0 10px;
+}
+
+.ci-list {
+  margin: 0 0 18px;
+  padding: 0 22px 0 0;
+}
+
+.ci-list li {
+  font-size: 17.5px;
+  line-height: 2;
+  color: #2b3a5c;
+  margin-bottom: 4px;
+}
+
+.ci-list li::marker {
+  color: var(--blue-600);
+}
+
 .ci-missing {
   text-align: center;
   font-size: 18px;
@@ -853,7 +876,7 @@ a.cs-profile {
   position: relative;
   aspect-ratio: 4 / 3;
   background:
-    url('../assets/background-blue.svg') center / 400px auto repeat,
+    url('../../assets/patterns/background-blue.svg') center / 400px auto repeat,
     linear-gradient(160deg, #eaf2fc, #d6e6fa);
   display: flex;
   align-items: center;
