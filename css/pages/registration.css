@@ -393,22 +393,22 @@ select.form-control-brand {
   font-size: 18px;
   font-weight: 800;
   border-radius: 999px;
-  border: 1px solid #0d1527;
+  border: 1px solid var(--brutal-border-color);
   cursor: pointer;
-  box-shadow: 2px 2px 0px #0d1527;
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
   text-align: center;
 }
 
 .btn-submit-brand:hover {
   background: var(--brutal-green-hover, #145c2a);
-  transform: translate(-2.5px, -2.5px);
-  box-shadow: 3px 3px 0px #0d1527;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .btn-submit-brand:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #0d1527;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .btn-cancel-brand {
@@ -419,8 +419,8 @@ select.form-control-brand {
   font-size: 18px;
   font-weight: 700;
   border-radius: 999px;
-  border: 1px solid #0d1527;
-  box-shadow: 2px 2px 0px #0d1527;
+  border: 1px solid var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   cursor: pointer;
   transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
   text-align: center;
@@ -429,13 +429,13 @@ select.form-control-brand {
 .btn-cancel-brand:hover {
   background-color: #e2e8f0;
   color: var(--text);
-  transform: translate(-2.5px, -2.5px);
-  box-shadow: 3px 3px 0px #0d1527;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .btn-cancel-brand:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #0d1527;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 /* Confirmation Modal */

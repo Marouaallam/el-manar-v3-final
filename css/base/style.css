@@ -27,15 +27,16 @@
   --shadow-lg: 0 20px 50px rgba(7, 38, 89, .18);
 
   /* Neubrutalism Design System Tokens */
-  --brutal-border-color: #0d1527;
-  --brutal-border-width: 1.5px;
+  --ink: #0d1527;
+  --brutal-border-color: rgba(7, 38, 89, 0.08);
+  --brutal-border-width: 1px;
   --brutal-border-width-sm: 1px;
   --brutal-radius-card: 24px;
   --brutal-radius-pill: 9999px;
-  --brutal-shadow: 3px 3px 0px var(--brutal-border-color);
-  --brutal-shadow-sm: 2px 2px 0px var(--brutal-border-color);
-  --brutal-shadow-hover: 5px 5px 0px var(--brutal-border-color);
-  --brutal-shadow-hover-sm: 3px 3px 0px var(--brutal-border-color);
+  --brutal-shadow: 0 8px 24px rgba(7, 38, 89, 0.08);
+  --brutal-shadow-sm: 0 4px 12px rgba(7, 38, 89, 0.10);
+  --brutal-shadow-hover: 0 16px 36px rgba(7, 38, 89, 0.14);
+  --brutal-shadow-hover-sm: 0 8px 20px rgba(7, 38, 89, 0.14);
   --brutal-card-bg: #fcfaff;
   --brutal-purple: #8b2cf5;
   --brutal-green: #1b7a37;
@@ -139,13 +140,13 @@ img {
 }
 
 .btn:hover {
-  transform: translate(-2.5px, -2.5px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover-sm);
 }
 
 .btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .btn-primary {
@@ -162,7 +163,7 @@ img {
 
 .btn-outline {
   background: #fff;
-  color: var(--brutal-border-color);
+  color: var(--ink, #0d1527);
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
   box-shadow: var(--brutal-shadow-sm);
 }
@@ -182,7 +183,7 @@ img {
 
 .btn-outline.on-dark:hover {
   background: #fff;
-  color: var(--brutal-border-color);
+  color: var(--ink, #0d1527);
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.6);
 }
 
@@ -375,7 +376,7 @@ nav.menu ul li:hover::after {
 
 .lang-pill {
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   border-radius: var(--brutal-radius-pill);
   padding: 8px 16px;
   font-size: 14px;
@@ -387,14 +388,14 @@ nav.menu ul li:hover::after {
 }
 
 .lang-pill:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   background: var(--blue-50);
 }
 
 .lang-pill:active {
-  transform: translate(1px, 1px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .signup-pill {
@@ -412,13 +413,13 @@ nav.menu ul li:hover::after {
 
 .signup-pill:hover {
   background: var(--brutal-green-hover);
-  transform: translate(-2.5px, -2.5px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover-sm);
 }
 
 .signup-pill:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 /* ── Floating registration button (all pages) ── */
@@ -554,7 +555,7 @@ nav.menu ul li:hover::after {
   padding: 16px 40px;
   border-radius: var(--brutal-radius-pill);
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   transition: transform .15s ease, background-color .2s ease, box-shadow .15s ease;
   display: inline-flex;
   align-items: center;
@@ -564,15 +565,15 @@ nav.menu ul li:hover::after {
 
 .hero .btn-primary:hover,
 #hero-cta:hover {
-  transform: translate(-3px, -3px) !important;
+  transform: translateY(-2px) !important;
   background: var(--brutal-green-hover);
-  box-shadow: 4px 4px 0px var(--brutal-border-color) !important;
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12) !important;
 }
 
 .hero .btn-primary:active,
 #hero-cta:active {
-  transform: translate(2px, 2px) !important;
-  box-shadow: 1px 1px 0px var(--brutal-border-color) !important;
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10) !important;
 }
 
 /* ── Hero Visual (logo + floating value tags) ── */
@@ -755,14 +756,14 @@ nav.menu ul li:hover::after {
 .btn-outline-glass {
   background: #ffffff;
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
-  color: var(--brutal-border-color);
+  color: var(--ink, #0d1527);
   font-size: 18.5px;
   padding: 16px 36px;
   border-radius: var(--brutal-radius-pill);
   font-weight: 700;
   text-decoration: none;
   transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -771,13 +772,13 @@ nav.menu ul li:hover::after {
 .btn-outline-glass:hover {
   background: var(--blue-50);
   color: var(--blue-800);
-  transform: translate(-2.5px, -2.5px);
-  box-shadow: 3px 3px 0px var(--brutal-border-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .btn-outline-glass:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 /* ── Hero Stage Navigation Pills Bar ── */
@@ -810,7 +811,7 @@ nav.menu ul li:hover::after {
   border-radius: 18px;
   text-decoration: none;
   color: #071938;
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   transition: transform .15s ease, box-shadow .15s ease;
   cursor: pointer;
   flex: 1;
@@ -819,13 +820,13 @@ nav.menu ul li:hover::after {
 
 .stage-pill:hover {
   background: #ffffff;
-  transform: translate(-2.5px, -2.5px);
-  box-shadow: 3px 3px 0px var(--brutal-border-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .stage-pill:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .pill-icon {
@@ -1286,13 +1287,13 @@ nav.menu ul li:hover::after {
   border-radius: 18px;
   padding: 22px 20px;
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .mini-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 4px 4px 0px var(--brutal-border-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .mini-card h4 {
@@ -1336,13 +1337,13 @@ nav.menu ul li:hover::after {
 }
 
 .stat-card:hover {
-  transform: translate(-4px, -4px) !important;
+  transform: translateY(-2px) !important;
   box-shadow: var(--brutal-shadow-hover) !important;
 }
 
 .stat-card:active {
-  transform: translate(2px, 2px) !important;
-  box-shadow: 2px 2px 0px var(--brutal-border-color) !important;
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10) !important;
 }
 
 .stat-card .num {
@@ -1409,7 +1410,7 @@ nav.menu ul li:hover::after {
 }
 
 .quote-card:hover {
-  transform: translate(-4px, -4px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover);
 }
 
@@ -1449,7 +1450,7 @@ nav.menu ul li:hover::after {
   border-radius: 16px;
   background: #ffffff;
   padding: 10px;
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
   margin-bottom: 12px;
   display: flex;
@@ -1522,7 +1523,7 @@ nav.menu ul li:hover::after {
 }
 
 .stage-card:hover {
-  transform: translate(-4px, -4px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover);
 }
 
@@ -1609,14 +1610,14 @@ nav.menu ul li:hover::after {
 }
 
 .stage-link:hover {
-  transform: translate(-2.5px, -2.5px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover-sm);
   filter: brightness(1.08);
 }
 
 .stage-link:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .link-pink {
@@ -1682,7 +1683,7 @@ nav.menu ul li:hover::after {
 }
 
 .adv-card:hover {
-  transform: translate(-3px, -3px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover);
 }
 
@@ -1695,7 +1696,7 @@ nav.menu ul li:hover::after {
   justify-content: center;
   margin-bottom: 22px;
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   transition: transform .25s ease;
 }
 
@@ -2413,7 +2414,7 @@ nav.menu ul li:hover::after {
 }
 
 .news-card:hover {
-  transform: translate(-4px, -4px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover);
 }
 
@@ -2436,7 +2437,7 @@ nav.menu ul li:hover::after {
   padding: 5px 14px;
   border-radius: var(--brutal-radius-pill);
   border: 1px solid var(--brutal-border-color);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .news-body {
@@ -2515,7 +2516,7 @@ nav.menu ul li:hover::after {
 }
 
 .testi-card:hover {
-  transform: translate(-4px, -4px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover);
 }
 
@@ -2616,19 +2617,19 @@ nav.menu ul li:hover::after {
   justify-content: center;
   font-size: 20px;
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
   flex-shrink: 0;
   transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .contact-item:hover .contact-item-icon {
-  transform: translate(-1.5px, -1.5px);
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .contact-item:active .contact-item-icon {
-  transform: translate(1px, 1px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .contact-form-card {
@@ -2681,7 +2682,7 @@ nav.menu ul li:hover::after {
 .form-group select:focus,
 .form-group textarea:focus {
   background: #fff;
-  box-shadow: 2px 2px 0px var(--brutal-border-color);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .contact-form-card .btn-submit {
@@ -2700,13 +2701,13 @@ nav.menu ul li:hover::after {
 }
 
 .contact-form-card .btn-submit:hover {
-  transform: translate(-2.5px, -2.5px);
+  transform: translateY(-2px);
   box-shadow: var(--brutal-shadow-hover-sm);
 }
 
 .contact-form-card .btn-submit:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--brutal-border-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 /* ── Footer ── */
@@ -2874,7 +2875,7 @@ footer p {
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
-  box-shadow: 2.5px 2.5px 0px var(--brutal-border-color, #0d1527);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2885,8 +2886,8 @@ footer p {
 .custom-pagination-bar .btn-nav-prev:hover:not(:disabled) {
   background: #f0f7ff;
   color: #1565C0;
-  transform: translate(-1.5px, -1.5px);
-  box-shadow: 4px 4px 0px var(--brutal-border-color, #0d1527);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .custom-pagination-bar .btn-nav-prev:disabled {
@@ -2922,21 +2923,21 @@ footer p {
   user-select: none;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   border: 1.5px solid var(--brutal-border-color, #0d1527);
-  box-shadow: 2px 2px 0px var(--brutal-border-color, #0d1527);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .custom-pagination-bar .num-item:hover:not(.active) {
   background: #f0f7ff;
   color: #1565C0;
-  transform: translate(-1.5px, -1.5px);
-  box-shadow: 3.5px 3.5px 0px var(--brutal-border-color, #0d1527);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .custom-pagination-bar .num-item.active {
   color: #ffffff;
   background: #1565C0;
   border: 1.5px solid var(--brutal-border-color, #0d1527);
-  box-shadow: 2px 2px 0px var(--brutal-border-color, #0d1527);
+  box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
 
 .custom-pagination-bar .dots-item {
@@ -2956,7 +2957,7 @@ footer p {
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  box-shadow: 2.5px 2.5px 0px var(--brutal-border-color, #0d1527);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   display: inline-flex;
   align-items: center;
@@ -2967,8 +2968,8 @@ footer p {
 
 .custom-pagination-bar .btn-nav-next:hover:not(:disabled) {
   background: #0d47a1;
-  transform: translate(-1.5px, -1.5px);
-  box-shadow: 4px 4px 0px var(--brutal-border-color, #0d1527);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
 }
 
 .custom-pagination-bar .btn-nav-next:disabled {
@@ -2986,36 +2987,36 @@ footer p {
 .psych-card-box,
 .service-picture-box {
   border: var(--brutal-border-width, 3px) solid var(--brutal-border-color, #0d1527) !important;
-  box-shadow: var(--brutal-shadow, 3px 3px 0px #0d1527) !important;
+  box-shadow: var(--brutal-shadow, 0 8px 22px rgba(7, 38, 89, 0.12)) !important;
   border-radius: var(--brutal-radius-card, 24px) !important;
   transition: transform 0.15s ease, box-shadow 0.15s ease !important;
 }
 
 .activity-detail-card:hover,
 .service-picture-box:hover {
-  transform: translate(-4px, -4px) !important;
-  box-shadow: var(--brutal-shadow-hover, 5px 5px 0px #0d1527) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--brutal-shadow-hover, 0 8px 22px rgba(7, 38, 89, 0.12)) !important;
 }
 
 .life-nav-card {
   background: #ffffff !important;
   border-radius: 16px !important;
   border: var(--brutal-border-width-sm, 2px) solid var(--brutal-border-color, #0d1527) !important;
-  box-shadow: 4px 4px 0px var(--brutal-border-color, #0d1527) !important;
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12) !important;
   transition: transform 0.15s ease, box-shadow 0.15s ease !important;
 }
 
 .life-nav-card:hover {
-  transform: translate(-2.5px, -2.5px) !important;
-  box-shadow: 6.5px 6.5px 0px var(--brutal-border-color, #0d1527) !important;
-  border-color: var(--brutal-border-color, #0d1527) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12) !important;
+  border-color: var(--brutal-border-color) !important;
 }
 
 .life-nav-card.active {
   background: var(--blue-600, #1565C0) !important;
   color: #ffffff !important;
-  border-color: var(--brutal-border-color, #0d1527) !important;
-  box-shadow: 4px 4px 0px var(--brutal-border-color, #0d1527) !important;
+  border-color: var(--brutal-border-color) !important;
+  box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12) !important;
 }
 
 /* ── Smooth Page Switch Transitions ── */
@@ -3050,4 +3051,74 @@ body.page-exit {
   transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
   pointer-events: none;
   box-shadow: 0 1px 6px rgba(15, 84, 176, 0.4);
+}
+
+/* =============================================
+   Button stroke – one simple outline for every button on the site
+   (filled buttons: darker edge of their own colour; light buttons: soft blue-grey line)
+   ============================================= */
+.btn-primary,
+.hero .btn-primary,
+.signup-pill,
+.floating-signup,
+.anniv-more,
+.cs-detail-btn,
+.hv-more a,
+.an-cta a,
+.btn-submit,
+.btn-submit-brand,
+.btn-open-maps,
+.btn-primary-level,
+.cs-chip.active,
+.yt-chip.active,
+.lr-stage.active,
+.filter-pill.active {
+  border: 1.5px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.btn-outline,
+.btn-outline-glass,
+.lang-pill,
+.cs-chip,
+.yt-chip,
+.lr-stage,
+.filter-pill,
+.lr-download,
+.yt-back,
+.cs-cta a,
+.btn-read-news,
+.btn-back-link,
+.btn-cancel-brand,
+.btn-secondary-level,
+.btn-middle-level,
+.btn-nav-prev,
+.btn-nav-next {
+  border: 1.5px solid #c9d5e8 !important;
+}
+
+.btn-outline:hover,
+.btn-outline-glass:hover,
+.lang-pill:hover,
+.cs-chip:hover,
+.yt-chip:hover,
+.lr-stage:hover,
+.filter-pill:hover,
+.lr-download:hover,
+.yt-back:hover,
+.btn-read-news:hover,
+.btn-back-link:hover,
+.btn-cancel-brand:hover,
+.btn-secondary-level:hover,
+.btn-middle-level:hover,
+.btn-nav-prev:hover,
+.btn-nav-next:hover {
+  border-color: var(--blue-500) !important;
+}
+
+/* when a light button becomes "active" it takes the filled stroke */
+.cs-chip.active,
+.yt-chip.active,
+.lr-stage.active,
+.filter-pill.active {
+  border-color: rgba(0, 0, 0, 0.18) !important;
 }
