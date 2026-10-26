@@ -15,16 +15,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
   margin-bottom: 36px;
 }
 
-.an-badges img:first-child {
-  width: 150px;
-}
-
-.an-badges img:last-child {
-  width: 160px;
+.an-logo-full {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(7, 38, 89, 0.08));
 }
 
 .an-quote {
@@ -117,12 +117,8 @@
     padding: 48px 16px 70px;
   }
 
-  .an-badges img:first-child {
-    width: 110px;
-  }
-
-  .an-badges img:last-child {
-    width: 120px;
+  .an-logo-full {
+    max-width: 320px;
   }
 
   .an-quote {

@@ -1140,6 +1140,19 @@ nav.menu ul li:hover::after {
   }
 }
 
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .anniv-badge {
   width: 170px;
   height: auto;
@@ -1149,12 +1162,18 @@ nav.menu ul li:hover::after {
 }
 
 .anniv-rob3 {
-  width: 200px;
+  width: 100%;
+  max-width: 520px;
   height: auto;
-  max-width: 100%;
   display: block;
   object-fit: contain;
-  margin-top: 18px;
+  margin: 0 auto 18px;
+  filter: drop-shadow(0 10px 24px rgba(7, 38, 89, 0.08));
+  transition: transform .3s ease;
+}
+
+.anniv-link:hover .anniv-rob3 {
+  transform: scale(1.02);
 }
 
 .anniv-wrap h2 {
@@ -1182,7 +1201,8 @@ nav.menu ul li:hover::after {
   }
 
   .anniv-rob3 {
-    width: 160px;
+    max-width: 340px;
+    margin-bottom: 14px;
   }
 
   .anniv-wrap h2 {
