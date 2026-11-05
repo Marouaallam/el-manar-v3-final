@@ -208,7 +208,7 @@ img {
 }
 
 header.nav {
-  padding: 8px 28px;
+  padding: 12px 28px;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -241,7 +241,7 @@ header.nav {
 }
 
 .logo-img {
-  height: 54px;
+  height: 64px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -278,7 +278,7 @@ nav.menu ul {
 /* 9 menu items: tighten spacing on mid-size screens so the bar stays on one line */
 @media (min-width: 901px) and (max-width: 1280px) {
   header.nav {
-    padding: 8px 20px;
+    padding: 12px 20px;
   }
 
   .nav-inner {
@@ -524,7 +524,7 @@ nav.menu ul li:hover::after {
 
 @media (max-width: 640px) {
   .logo-img {
-    height: 46px;
+    height: 52px;
   }
 
   .brand-name {
