@@ -1,5 +1,5 @@
 /**
- * Home page – فضاء الإبداع cards cycle through their section's examples
+ * Home page – إبداع وفكر cards cycle through their section's examples
  * (from js/creative-data.js). Each example shows its own picture (item.image)
  * or its icon, and the card links to the example currently shown.
  * Markup: <a class="ch-card" data-rotate="models|contributions|creations|publications">

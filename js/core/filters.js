@@ -1,5 +1,5 @@
 /**
- * Simple category filter for the فضاء الإبداع pages.
+ * Simple category filter for the إبداع وفكر pages.
  * Markup: a .cs-chips container with buttons [data-filter="all" | "<cat>"],
  * followed by items carrying data-cat="<cat>" inside [data-filter-items].
  */

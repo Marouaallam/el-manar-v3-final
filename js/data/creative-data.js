@@ -1,5 +1,5 @@
 /**
- * فضاء الإبداع – shared examples.
+ * إبداع وفكر – shared examples.
  * Used by the home page rotating cards (creative-rotator.js) and the details page (creative-item.js).
  *
  * To add an example: copy an item into the right list.

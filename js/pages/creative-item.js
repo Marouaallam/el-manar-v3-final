@@ -1,5 +1,5 @@
 /**
- * Details page for a فضاء الإبداع example: creative-item.html?id=<id>
+ * Details page for a إبداع وفكر example: creative-item.html?id=<id>
  * Content comes from js/creative-data.js.
  */
 document.addEventListener('DOMContentLoaded', () => {

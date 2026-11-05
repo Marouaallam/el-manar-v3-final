@@ -52,7 +52,7 @@
 }
 
 body {
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.85;
@@ -65,7 +65,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-weight: 700;
   line-height: 1.35;
 }
@@ -1376,7 +1376,7 @@ nav.menu ul li:hover::after {
 }
 
 .anniv-wrap h2.anniv-title {
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-size: clamp(38px, 5.5vw + 10px, 72px);
   font-weight: 800;
   line-height: 1.1;
@@ -1384,8 +1384,14 @@ nav.menu ul li:hover::after {
   margin: 0;
 }
 
+.anniv-title-img {
+  display: block;
+  width: clamp(150px, 14vw + 70px, 250px);
+  height: auto;
+}
+
 .anniv-for {
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-size: clamp(18px, 1.6vw + 10px, 28px);
   font-weight: 800;
   color: var(--text);
@@ -1393,7 +1399,7 @@ nav.menu ul li:hover::after {
 }
 
 .anniv-sub {
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-size: clamp(14px, 1.2vw + 8px, 22px);
   font-weight: 700;
   color: var(--blue-800);
@@ -3148,7 +3154,7 @@ footer p {
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
   display: inline-flex;
   align-items: center;
@@ -3195,7 +3201,7 @@ footer p {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
   color: #072659;
   user-select: none;
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   border: 1.5px solid var(--brutal-border-color, #0d1527);
   box-shadow: 0 2px 8px rgba(7, 38, 89, 0.10);
 }
@@ -3232,7 +3238,7 @@ footer p {
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   box-shadow: 0 8px 22px rgba(7, 38, 89, 0.12);
-  font-family: 'Alyamama', sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
