@@ -448,8 +448,8 @@ nav.menu ul li:hover::after {
 /* ── Floating registration button (all pages) ── */
 .floating-signup {
   position: fixed;
-  left: 24px;
-  bottom: 24px;
+  left: clamp(14px, 2vw, 24px);
+  bottom: clamp(14px, 2vw, 24px);
   z-index: 9999;
   display: inline-flex;
   align-items: center;
@@ -522,13 +522,6 @@ nav.menu ul li:hover::after {
 }
 
 @media (max-width: 640px) {
-  .floating-signup {
-    left: 16px;
-    bottom: 16px;
-    padding: 10px 22px;
-    font-size: 15px;
-  }
-
   .logo-img {
     height: 52px;
   }
@@ -546,7 +539,7 @@ nav.menu ul li:hover::after {
   background-color: var(--blue-600);
   background-image: linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   color: #fff;
-  padding: 100px 24px 90px;
+  padding: clamp(56px, 8vw, 100px) clamp(16px, 3vw, 24px) clamp(48px, 7vw, 90px);
   position: relative;
   overflow: hidden;
 }
@@ -590,16 +583,19 @@ nav.menu ul li:hover::after {
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #ffffff;
-  font-size: 13.5px;
+  font-size: clamp(12px, 0.4vw + 10px, 13.5px);
   font-weight: 700;
-  padding: 3px 12px;
+  padding: 3px clamp(10px, 1vw, 12px);
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
   border-radius: var(--brutal-radius-pill);
   box-shadow: none;
   cursor: default;
 }
 
 .hero h1 {
-  font-size: 70px;
+  font-size: clamp(34px, 4.6vw + 8px, 70px);
   line-height: 1.25;
   font-weight: 700;
   color: #ffffff;
@@ -619,9 +615,7 @@ nav.menu ul li:hover::after {
 .hero .btn-primary {
   background: var(--brutal-green);
   color: #ffffff;
-  font-size: 17px;
   font-weight: 700;
-  padding: 8px 22px;
   border-radius: var(--brutal-radius-pill);
   border: 1.5px solid var(--brutal-green) !important;
   box-shadow: 0 6px 18px rgba(7, 25, 56, 0.25);
@@ -770,8 +764,6 @@ nav.menu ul li:hover::after {
 
 /* ── Hero Actions ── */
 .hero .btn-outline-glass {
-  font-size: 17px;
-  padding: 8px 22px;
   background: transparent;
   color: #ffffff;
   border: 1.5px solid #ffffff !important;
@@ -794,10 +786,6 @@ nav.menu ul li:hover::after {
 }
 
 @media (max-width: 960px) {
-  .hero {
-    padding: 120px 16px 80px;
-  }
-
   .hero .container.hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -811,12 +799,6 @@ nav.menu ul li:hover::after {
   .hero-actions {
     justify-content: center;
     gap: 10px;
-  }
-
-  .hero .btn-primary,
-  .hero .btn-outline-glass {
-    font-size: 15px;
-    padding: 7px 18px;
   }
 
   .hero-visual {
@@ -1298,12 +1280,12 @@ nav.menu ul li:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: clamp(12px, 3vw, 28px);
   margin-bottom: 14px;
 }
 
 .anniv-badge25 {
-  width: 190px;
+  width: clamp(100px, 18vw, 190px);
   height: auto;
   flex-shrink: 0;
   object-fit: contain;
@@ -1378,7 +1360,7 @@ nav.menu ul li:hover::after {
 
 .anniv-wrap h2.anniv-title {
   font-family: 'Alyamama', sans-serif;
-  font-size: 72px;
+  font-size: clamp(38px, 5.5vw + 10px, 72px);
   font-weight: 800;
   line-height: 1.1;
   color: var(--text);
@@ -1387,7 +1369,7 @@ nav.menu ul li:hover::after {
 
 .anniv-for {
   font-family: 'Alyamama', sans-serif;
-  font-size: 28px;
+  font-size: clamp(18px, 1.6vw + 10px, 28px);
   font-weight: 800;
   color: var(--text);
   white-space: nowrap;
@@ -1395,7 +1377,7 @@ nav.menu ul li:hover::after {
 
 .anniv-sub {
   font-family: 'Alyamama', sans-serif;
-  font-size: 22px;
+  font-size: clamp(14px, 1.2vw + 8px, 22px);
   font-weight: 700;
   color: var(--blue-800);
   white-space: nowrap;
@@ -1430,26 +1412,6 @@ nav.menu ul li:hover::after {
   .anniv-rob3 {
     max-width: 285px;
     margin-bottom: 8px;
-  }
-
-  .anniv-head {
-    gap: 14px;
-  }
-
-  .anniv-badge25 {
-    width: 110px;
-  }
-
-  .anniv-wrap h2.anniv-title {
-    font-size: 42px;
-  }
-
-  .anniv-for {
-    font-size: 19px;
-  }
-
-  .anniv-sub {
-    font-size: 15px;
   }
 
   .anniv-hint {
@@ -3108,9 +3070,6 @@ footer p {
   }
 
 
-  .hero h1 {
-    font-size: 38px;
-  }
 
   .hero-stage-bar {
     flex-direction: column;
@@ -3441,44 +3400,15 @@ body.page-exit {
 .yt-back,
 .btn-nav-prev,
 .btn-nav-next {
-  font-size: 17px !important;
-  padding: 8px 22px !important;
-}
-
-@media (max-width: 960px) {
-  .btn,
-  .btn-outline-glass,
-  .signup-pill,
-  .floating-signup,
-  .cs-detail-btn,
-  .cs-cta a,
-  .an-cta a,
-  .btn-submit,
-  .btn-submit-brand,
-  .btn-cancel-brand,
-  .btn-open-maps,
-  .btn-back-link,
-  .btn-read-news,
-  .lr-download,
-  .yt-back,
-  .btn-nav-prev,
-  .btn-nav-next {
-    font-size: 15px !important;
-    padding: 7px 18px !important;
-  }
+  /* fluid: 15px on phones -> 17px on desktop, no breakpoint jumps */
+  font-size: clamp(15px, 0.4vw + 13px, 17px) !important;
+  padding: clamp(7px, 0.3vw + 6px, 8px) clamp(18px, 1vw + 12px, 22px) !important;
 }
 
 /* Floating registration button: tighter padding on the icon side + white ring
    (more specific than the unified button rules above) */
 a.floating-signup {
-  padding: 6px 8px 6px 24px !important;
-  font-size: 17px !important;
+  padding: clamp(5px, 0.3vw + 4px, 6px) clamp(6px, 0.3vw + 5px, 8px) clamp(5px, 0.3vw + 4px, 6px) clamp(18px, 1vw + 12px, 24px) !important;
+  font-size: clamp(15px, 0.4vw + 13px, 17px) !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
-}
-
-@media (max-width: 960px) {
-  a.floating-signup {
-    padding: 5px 6px 5px 18px !important;
-    font-size: 15px !important;
-  }
 }
