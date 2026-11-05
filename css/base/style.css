@@ -209,8 +209,16 @@ img {
 
 header.nav {
   padding: 12px 28px;
-  max-width: 1240px;
+  max-width: 1080px;
   margin: 0 auto;
+}
+
+/* Desktop: shrink the bar to its content and keep it centred */
+@media (min-width: 901px) {
+  header.nav {
+    width: fit-content;
+    max-width: 100%;
+  }
 }
 
 .nav-inner {
@@ -224,7 +232,7 @@ header.nav {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-weight: 800;
   font-size: 20px;
   color: var(--blue-800);
@@ -238,6 +246,15 @@ header.nav {
   object-fit: contain;
   flex-shrink: 0;
   display: block;
+}
+
+.brand-name {
+  font-family: 'Alyamama', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--blue-800);
+  white-space: nowrap;
 }
 
 nav.menu {
@@ -274,6 +291,10 @@ nav.menu ul {
 
   .brand {
     font-size: 18px;
+  }
+
+  .brand-name {
+    font-size: 14px;
   }
 }
 
@@ -400,7 +421,8 @@ nav.menu ul li:hover::after {
 }
 
 .signup-pill {
-  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);
+  /* red gradient taken from the flame in the El Manar logo */
+  background: linear-gradient(135deg, #ED1B32 0%, #D61727 55%, #B91319 100%);
   color: #fff;
   padding: 10px 24px;
   border-radius: var(--brutal-radius-pill);
@@ -408,19 +430,19 @@ nav.menu ul li:hover::after {
   font-size: 17px;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
+  box-shadow: 0 4px 16px rgba(185, 19, 25, 0.30);
   transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
 
 .signup-pill:hover {
-  filter: brightness(1.14);
+  filter: brightness(1.08);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(2, 132, 199, 0.50);
+  box-shadow: 0 8px 22px rgba(185, 19, 25, 0.40);
 }
 
 .signup-pill:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+  box-shadow: 0 2px 8px rgba(185, 19, 25, 0.25);
 }
 
 /* ── Floating registration button (all pages) ── */
@@ -431,36 +453,72 @@ nav.menu ul li:hover::after {
   z-index: 9999;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);
+  gap: 10px;
+  /* logo greens: bright leaf green -> deep brand green */
+  background: linear-gradient(135deg, #28AD4B 0%, #1b7a37 100%);
   color: #fff;
-  padding: 12px 28px;
   border-radius: var(--brutal-radius-pill);
-  font-weight: 700;
-  font-size: 17.5px;
+  font-weight: 800;
+  letter-spacing: .2px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 10px 26px rgba(27, 122, 55, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
   transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
 }
 
-/* simple line "edit" icon */
+/* "edit" icon inside a white circle */
 .floating-signup::before {
   content: '';
-  width: 16px;
-  height: 16px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b7a37' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E") center / 15px no-repeat,
+    #ffffff;
+  box-shadow: 0 2px 6px rgba(7, 25, 56, 0.18);
+  transition: transform .25s ease;
+}
+
+/* soft pulse ring that draws the eye */
+.floating-signup::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(40, 173, 75, 0.55);
+  animation: floating-signup-pulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floating-signup-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(40, 173, 75, 0.55); }
+  70%  { box-shadow: 0 0 0 14px rgba(40, 173, 75, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(40, 173, 75, 0); }
 }
 
 .floating-signup:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.12);
-  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.60), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
+  filter: brightness(1.06);
+  box-shadow:
+    0 14px 32px rgba(27, 122, 55, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.floating-signup:hover::before {
+  transform: rotate(-12deg) scale(1.06);
 }
 
 .floating-signup:active {
   transform: translateY(0);
-  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 16px rgba(27, 122, 55, 0.40);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-signup::after {
+    animation: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -470,32 +528,39 @@ nav.menu ul li:hover::after {
     padding: 10px 22px;
     font-size: 15px;
   }
+
+  .logo-img {
+    height: 52px;
+  }
+
+  .brand-name {
+    font-size: 13px;
+  }
 }
 
 /* ── Hero ── */
 .hero {
-  min-height: 88vh;
+  min-height: 85.8vh;
   display: flex;
   align-items: center;
   background-color: var(--blue-600);
   background-image: linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   color: #fff;
-  padding: 140px 24px 120px;
+  padding: 100px 24px 90px;
   position: relative;
   overflow: hidden;
 }
 
-/* Pattern (background.svg) recolored to soft white lines */
+/* Pattern (hero-pattern.png: white lines on transparent, seamless tile) */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../../assets/patterns/background.svg');
-  background-size: 600px auto;
+  background-image: url('../../assets/patterns/hero-pattern.png');
+  background-size: 700px auto;
   background-position: center;
   background-repeat: repeat;
-  filter: brightness(0) invert(1);
-  opacity: 0.02;
+  opacity: 0.08;
   pointer-events: none;
   z-index: 0;
 }
@@ -522,17 +587,19 @@ nav.menu ul li:hover::after {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  color: var(--blue-800);
-  font-size: 16.5px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 13.5px;
   font-weight: 700;
-  padding: 6px 18px;
+  padding: 3px 12px;
   border-radius: var(--brutal-radius-pill);
-  box-shadow: 0 6px 18px rgba(7, 25, 56, 0.18);
+  box-shadow: none;
+  cursor: default;
 }
 
 .hero h1 {
-  font-size: 82px;
+  font-size: 70px;
   line-height: 1.25;
   font-weight: 700;
   color: #ffffff;
@@ -550,15 +617,15 @@ nav.menu ul li:hover::after {
 }
 
 .hero .btn-primary {
-  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);
+  background: var(--brutal-green);
   color: #ffffff;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 700;
-  padding: 16px 42px;
+  padding: 8px 22px;
   border-radius: var(--brutal-radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 8px 26px rgba(2, 132, 199, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  transition: transform .15s ease, filter .2s ease, box-shadow .15s ease;
+  border: 1.5px solid var(--brutal-green) !important;
+  box-shadow: 0 6px 18px rgba(7, 25, 56, 0.25);
+  transition: transform .15s ease, background-color .2s ease, box-shadow .15s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -568,14 +635,15 @@ nav.menu ul li:hover::after {
 .hero .btn-primary:hover,
 #hero-cta:hover {
   transform: translateY(-2px) !important;
-  filter: brightness(1.14);
-  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.60), inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+  background: var(--brutal-green-hover);
+  border-color: var(--brutal-green-hover) !important;
+  box-shadow: 0 10px 24px rgba(7, 25, 56, 0.30) !important;
 }
 
 .hero .btn-primary:active,
 #hero-cta:active {
   transform: translateY(0) !important;
-  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 4px 12px rgba(7, 25, 56, 0.25) !important;
 }
 
 /* ── Hero Visual (logo + floating value tags) ── */
@@ -701,6 +769,21 @@ nav.menu ul li:hover::after {
 }
 
 /* ── Hero Actions ── */
+.hero .btn-outline-glass {
+  font-size: 17px;
+  padding: 8px 22px;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid #ffffff !important;
+  box-shadow: none;
+}
+
+.hero .btn-outline-glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: #ffffff !important;
+}
+
 .hero-actions {
   display: flex;
   align-items: center;
@@ -727,6 +810,13 @@ nav.menu ul li:hover::after {
 
   .hero-actions {
     justify-content: center;
+    gap: 10px;
+  }
+
+  .hero .btn-primary,
+  .hero .btn-outline-glass {
+    font-size: 15px;
+    padding: 7px 18px;
   }
 
   .hero-visual {
@@ -759,8 +849,8 @@ nav.menu ul li:hover::after {
   background: #ffffff;
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
   color: var(--ink, #0d1527);
-  font-size: 21px;
-  padding: 16px 38px;
+  font-size: 19.5px;
+  padding: 10px 26px;
   border-radius: var(--brutal-radius-pill);
   font-weight: 700;
   text-decoration: none;
@@ -870,7 +960,7 @@ nav.menu ul li:hover::after {
 .subpage-hero {
   background:
     url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
-    linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
+    linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   color: #ffffff;
   padding: 85px 28px 75px;
   text-align: center;
@@ -1102,8 +1192,7 @@ nav.menu ul li:hover::after {
   max-width: 860px;
   padding: 24px 36px 24px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%),
-    url('../../assets/patterns/background-blue.svg') center / 600px auto repeat,
+    url('../../assets/patterns/hero-pattern-blue.png') center / 600px auto repeat,
     #ffffff;
   border: 1px solid #edf2f7;
   border-radius: 26px;
@@ -1117,10 +1206,11 @@ nav.menu ul li:hover::after {
   content: '';
   position: absolute;
   top: 0;
-  left: 25%;
-  right: 25%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.45), rgba(2, 132, 199, 0.45), transparent);
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  /* green + red, like the leaf on the 25 emblem */
+  background: linear-gradient(90deg, transparent, #28AD4B 30%, #1b7a37 50%, #D61727 70%, transparent);
   border-radius: 0 0 4px 4px;
 }
 
@@ -1203,6 +1293,114 @@ nav.menu ul li:hover::after {
   transform: scale(1.02);
 }
 
+/* 25 emblem + "ربع قرن" title side by side */
+.anniv-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 14px;
+}
+
+.anniv-badge25 {
+  width: 190px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(7, 38, 89, 0.10));
+  transition: transform .3s ease;
+}
+
+.anniv-link:hover .anniv-badge25 {
+  transform: scale(1.03) rotate(-2deg);
+}
+
+/* entrance: emblem fades + scales in once the card scrolls into view */
+.anniv-link.reveal .anniv-badge25 {
+  opacity: 0;
+  transform: scale(.85) rotate(-8deg);
+  transition: opacity .7s ease .15s, transform .7s cubic-bezier(.2, .8, .2, 1.1) .15s;
+}
+
+.anniv-link.reveal.in-view .anniv-badge25 {
+  opacity: 1;
+  transform: none;
+}
+
+.anniv-link.reveal.in-view:hover .anniv-badge25 {
+  transform: scale(1.03) rotate(-2deg);
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anniv-link.reveal .anniv-badge25 {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* "clickable" cue in the card corner */
+.anniv-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue-800);
+  border-bottom: 1.5px solid transparent;
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.anniv-hint-arrow {
+  display: inline-block;
+  transition: transform .25s ease;
+}
+
+.anniv-link:hover .anniv-hint {
+  color: var(--blue-900);
+  border-bottom-color: currentColor;
+}
+
+.anniv-link:hover .anniv-hint-arrow {
+  transform: translateX(-4px);
+}
+
+.anniv-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.anniv-wrap h2.anniv-title {
+  font-family: 'Alyamama', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text);
+  margin: 0;
+}
+
+.anniv-for {
+  font-family: 'Alyamama', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.anniv-sub {
+  font-family: 'Alyamama', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue-800);
+  white-space: nowrap;
+}
+
 .anniv-wrap h2 {
   font-size: 42px;
   font-weight: 700;
@@ -1234,6 +1432,32 @@ nav.menu ul li:hover::after {
     margin-bottom: 8px;
   }
 
+  .anniv-head {
+    gap: 14px;
+  }
+
+  .anniv-badge25 {
+    width: 110px;
+  }
+
+  .anniv-wrap h2.anniv-title {
+    font-size: 42px;
+  }
+
+  .anniv-for {
+    font-size: 19px;
+  }
+
+  .anniv-sub {
+    font-size: 15px;
+  }
+
+  .anniv-hint {
+    position: static;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
   .anniv-wrap h2 {
     font-size: 24px;
   }
@@ -1247,6 +1471,19 @@ nav.menu ul li:hover::after {
     font-size: 16px;
     padding: 9px 22px;
     margin-top: 12px;
+  }
+}
+
+/* narrow phones: emblem above the text */
+@media (max-width: 420px) {
+  .anniv-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .anniv-sub {
+    white-space: normal;
+    text-align: center;
   }
 }
 
@@ -1372,7 +1609,7 @@ nav.menu ul li:hover::after {
 .stats {
   background:
     url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
-    linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
+    linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   padding: 80px 24px;
   position: relative;
 }
@@ -1708,7 +1945,7 @@ nav.menu ul li:hover::after {
 .advantages {
   background:
     url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
-    linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
+    linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   padding: 90px 24px;
   color: #fff;
 }
@@ -2414,7 +2651,7 @@ nav.menu ul li:hover::after {
 .news {
   background:
     url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
-    linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
+    linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   padding: 100px 24px;
 }
 
@@ -2552,6 +2789,7 @@ nav.menu ul li:hover::after {
 .news-cta .btn-outline-glass {
   padding: 10px 24px;
   font-size: 15.5px;
+  color: var(--blue-800);
 }
 
 /* ── Testimonials ── */
@@ -2774,7 +3012,7 @@ nav.menu ul li:hover::after {
 footer {
   background:
     url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
-    linear-gradient(135deg, #072659 0%, #0f54b0 35%, #1565C0 65%, #0284c7 85%, #38bdf8 100%);
+    linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   color: #d0e1fd;
   padding: 64px 24px 28px;
   font-size: 15px;
@@ -2871,7 +3109,7 @@ footer p {
 
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 38px;
   }
 
   .hero-stage-bar {
@@ -3180,4 +3418,67 @@ body.page-exit {
 .lr-stage.active,
 .filter-pill.active {
   border-color: rgba(0, 0, 0, 0.18) !important;
+}
+
+/* =============================================
+   Unified button size – every action button matches the hero buttons
+   (filter chips, the language pill and the registration level choices keep their own size)
+   ============================================= */
+.btn,
+.btn-outline-glass,
+.signup-pill,
+.floating-signup,
+.cs-detail-btn,
+.cs-cta a,
+.an-cta a,
+.btn-submit,
+.btn-submit-brand,
+.btn-cancel-brand,
+.btn-open-maps,
+.btn-back-link,
+.btn-read-news,
+.lr-download,
+.yt-back,
+.btn-nav-prev,
+.btn-nav-next {
+  font-size: 17px !important;
+  padding: 8px 22px !important;
+}
+
+@media (max-width: 960px) {
+  .btn,
+  .btn-outline-glass,
+  .signup-pill,
+  .floating-signup,
+  .cs-detail-btn,
+  .cs-cta a,
+  .an-cta a,
+  .btn-submit,
+  .btn-submit-brand,
+  .btn-cancel-brand,
+  .btn-open-maps,
+  .btn-back-link,
+  .btn-read-news,
+  .lr-download,
+  .yt-back,
+  .btn-nav-prev,
+  .btn-nav-next {
+    font-size: 15px !important;
+    padding: 7px 18px !important;
+  }
+}
+
+/* Floating registration button: tighter padding on the icon side + white ring
+   (more specific than the unified button rules above) */
+a.floating-signup {
+  padding: 6px 8px 6px 24px !important;
+  font-size: 17px !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (max-width: 960px) {
+  a.floating-signup {
+    padding: 5px 6px 5px 18px !important;
+    font-size: 15px !important;
+  }
 }
