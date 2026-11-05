@@ -208,7 +208,7 @@ img {
 }
 
 header.nav {
-  padding: 12px 28px;
+  padding: 8px 28px;
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -241,7 +241,7 @@ header.nav {
 }
 
 .logo-img {
-  height: 64px;
+  height: 54px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -252,8 +252,9 @@ header.nav {
   font-family: 'Alyamama', sans-serif;
   font-weight: 800;
   font-size: 17px;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--blue-800);
+  /* two fixed lines via <br>: "مؤسسة المنار" / "للتربية والتعليم" */
   white-space: nowrap;
 }
 
@@ -277,7 +278,7 @@ nav.menu ul {
 /* 9 menu items: tighten spacing on mid-size screens so the bar stays on one line */
 @media (min-width: 901px) and (max-width: 1280px) {
   header.nav {
-    padding: 12px 20px;
+    padding: 8px 20px;
   }
 
   .nav-inner {
@@ -421,8 +422,8 @@ nav.menu ul li:hover::after {
 }
 
 .signup-pill {
-  /* red gradient taken from the flame in the El Manar logo */
-  background: linear-gradient(135deg, #ED1B32 0%, #D61727 55%, #B91319 100%);
+  /* original sky-blue gradient */
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);
   color: #fff;
   padding: 10px 24px;
   border-radius: var(--brutal-radius-pill);
@@ -430,19 +431,19 @@ nav.menu ul li:hover::after {
   font-size: 17px;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 4px 16px rgba(185, 19, 25, 0.30);
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
   transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
 
 .signup-pill:hover {
-  filter: brightness(1.08);
+  filter: brightness(1.14);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(185, 19, 25, 0.40);
+  box-shadow: 0 8px 22px rgba(2, 132, 199, 0.50);
 }
 
 .signup-pill:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(185, 19, 25, 0.25);
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
 }
 
 /* ── Floating registration button (all pages) ── */
@@ -454,15 +455,15 @@ nav.menu ul li:hover::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  /* logo greens: bright leaf green -> deep brand green */
-  background: linear-gradient(135deg, #28AD4B 0%, #1b7a37 100%);
+  /* red gradient from the flame in the El Manar logo */
+  background: linear-gradient(135deg, #ED1B32 0%, #D61727 55%, #B91319 100%);
   color: #fff;
   border-radius: var(--brutal-radius-pill);
   font-weight: 800;
   letter-spacing: .2px;
   text-decoration: none;
   box-shadow:
-    0 10px 26px rgba(27, 122, 55, 0.45),
+    0 10px 26px rgba(185, 19, 25, 0.40),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
   transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
 }
@@ -475,7 +476,7 @@ nav.menu ul li:hover::after {
   height: 30px;
   border-radius: 50%;
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231b7a37' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E") center / 15px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D61727' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E") center / 15px no-repeat,
     #ffffff;
   box-shadow: 0 2px 6px rgba(7, 25, 56, 0.18);
   transition: transform .25s ease;
@@ -487,22 +488,22 @@ nav.menu ul li:hover::after {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(40, 173, 75, 0.55);
+  box-shadow: 0 0 0 0 rgba(237, 27, 50, 0.50);
   animation: floating-signup-pulse 2.4s ease-out infinite;
   pointer-events: none;
 }
 
 @keyframes floating-signup-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(40, 173, 75, 0.55); }
-  70%  { box-shadow: 0 0 0 14px rgba(40, 173, 75, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(40, 173, 75, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(237, 27, 50, 0.50); }
+  70%  { box-shadow: 0 0 0 14px rgba(237, 27, 50, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(237, 27, 50, 0); }
 }
 
 .floating-signup:hover {
   transform: translateY(-3px);
   filter: brightness(1.06);
   box-shadow:
-    0 14px 32px rgba(27, 122, 55, 0.55),
+    0 14px 32px rgba(185, 19, 25, 0.50),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
@@ -512,7 +513,7 @@ nav.menu ul li:hover::after {
 
 .floating-signup:active {
   transform: translateY(0);
-  box-shadow: 0 6px 16px rgba(27, 122, 55, 0.40);
+  box-shadow: 0 6px 16px rgba(185, 19, 25, 0.35);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -523,7 +524,7 @@ nav.menu ul li:hover::after {
 
 @media (max-width: 640px) {
   .logo-img {
-    height: 52px;
+    height: 46px;
   }
 
   .brand-name {
@@ -537,7 +538,12 @@ nav.menu ul li:hover::after {
   display: flex;
   align-items: center;
   background-color: var(--blue-600);
-  background-image: linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
+  /* stronger gradient: deep navy -> brand blue -> bright sky,
+     plus two soft light/dark glows for depth */
+  background-image:
+    radial-gradient(ellipse 75% 85% at 10% 90%, rgba(76, 201, 250, 0.75) 0%, rgba(76, 201, 250, 0) 70%),
+    radial-gradient(ellipse 45% 50% at 92% 8%, rgba(7, 38, 89, 0.35) 0%, rgba(7, 38, 89, 0) 70%),
+    linear-gradient(135deg, #0a3d8f 0%, #0e5dbb 22%, #1b85df 45%, #38bdf8 72%, #6dd5fb 100%);
   color: #fff;
   padding: clamp(56px, 8vw, 100px) clamp(16px, 3vw, 24px) clamp(48px, 7vw, 90px);
   position: relative;
@@ -572,8 +578,15 @@ nav.menu ul li:hover::after {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  /* one equal space between badge, title, text and buttons */
+  gap: clamp(18px, 2vw, 26px);
   text-align: right;
+  min-width: 0;
+}
+
+/* grid children may shrink below their content width (prevents text running off small screens) */
+.hero .container.hero-grid > * {
+  min-width: 0;
 }
 
 .hero-badge {
@@ -596,30 +609,34 @@ nav.menu ul li:hover::after {
 
 .hero h1 {
   font-size: clamp(34px, 4.6vw + 8px, 70px);
-  line-height: 1.25;
+  line-height: 1.15;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 0 4px 20px rgba(7, 25, 56, 0.3);
-  margin: 0;
+  /* optical balance: the glyphs leave more empty room below the title than above it,
+     so nudge it down a little and pull the paragraph up -> equal visible gaps */
+  margin: 0.2em 0 -0.25em;
 }
 
 .hero p {
   max-width: 600px;
   color: rgba(255, 255, 255, .95);
-  font-size: 25px;
+  font-size: clamp(17px, 0.9vw + 13px, 25px);
   font-weight: 700;
-  line-height: 1.9;
+  line-height: 1.8;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 .hero .btn-primary {
-  background: var(--brutal-green);
+  /* red gradient from the flame in the El Manar logo */
+  background: linear-gradient(135deg, #ED1B32 0%, #D61727 55%, #B91319 100%);
   color: #ffffff;
   font-weight: 700;
   border-radius: var(--brutal-radius-pill);
-  border: 1.5px solid var(--brutal-green) !important;
-  box-shadow: 0 6px 18px rgba(7, 25, 56, 0.25);
-  transition: transform .15s ease, background-color .2s ease, box-shadow .15s ease;
+  border: 1.5px solid #B91319 !important;
+  box-shadow: 0 6px 18px rgba(185, 19, 25, 0.30);
+  transition: transform .15s ease, filter .2s ease, box-shadow .15s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -629,15 +646,15 @@ nav.menu ul li:hover::after {
 .hero .btn-primary:hover,
 #hero-cta:hover {
   transform: translateY(-2px) !important;
-  background: var(--brutal-green-hover);
-  border-color: var(--brutal-green-hover) !important;
-  box-shadow: 0 10px 24px rgba(7, 25, 56, 0.30) !important;
+  filter: brightness(1.08);
+  border-color: #B91319 !important;
+  box-shadow: 0 10px 24px rgba(185, 19, 25, 0.40) !important;
 }
 
 .hero .btn-primary:active,
 #hero-cta:active {
   transform: translateY(0) !important;
-  box-shadow: 0 4px 12px rgba(7, 25, 56, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(185, 19, 25, 0.25) !important;
 }
 
 /* ── Hero Visual (logo + floating value tags) ── */
@@ -782,7 +799,7 @@ nav.menu ul li:hover::after {
   justify-content: flex-start;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 @media (max-width: 960px) {
@@ -941,7 +958,7 @@ nav.menu ul li:hover::after {
 /* ── Subpage Hero Banner ── */
 .subpage-hero {
   background:
-    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/hero-pattern-white.png') center / 700px auto repeat,
     linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   color: #ffffff;
   padding: 85px 28px 75px;
@@ -1570,7 +1587,7 @@ nav.menu ul li:hover::after {
 /* ── Stats (Blue Banner) ── */
 .stats {
   background:
-    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/hero-pattern-white.png') center / 700px auto repeat,
     linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   padding: 80px 24px;
   position: relative;
@@ -1906,7 +1923,7 @@ nav.menu ul li:hover::after {
 /* ── Advantages Section (Blue Banner) ── */
 .advantages {
   background:
-    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/hero-pattern-white.png') center / 700px auto repeat,
     linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   padding: 90px 24px;
   color: #fff;
@@ -2265,7 +2282,7 @@ nav.menu ul li:hover::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../../assets/patterns/background-white.svg') center / 500px auto repeat;
+  background: url('../../assets/patterns/hero-pattern-white.png') center / 600px auto repeat;
   pointer-events: none;
 }
 
@@ -2612,7 +2629,7 @@ nav.menu ul li:hover::after {
 /* ── News ── */
 .news {
   background:
-    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/hero-pattern-white.png') center / 700px auto repeat,
     linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   padding: 100px 24px;
 }
@@ -2973,7 +2990,7 @@ nav.menu ul li:hover::after {
 /* ── Footer ── */
 footer {
   background:
-    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/hero-pattern-white.png') center / 700px auto repeat,
     linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   color: #d0e1fd;
   padding: 64px 24px 28px;

@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const section = window.CREATIVE_SECTIONS[sectionKey];
-  document.title = `${item.title} – مدرسة المنار`;
+  document.title = `${item.title} – مؤسسة المنار`;
   hero.querySelector('h1').textContent = item.title;
   hero.querySelector('p').textContent = section.name;
   const crumb = hero.querySelector('.breadcrumb');

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const video = window.VIDEOS.find(v => v.id === id) || window.VIDEOS[0];
   const category = window.VIDEO_CATEGORIES[video.category] || '';
 
-  document.title = `${video.title} – ألبوم الفيديو – مدرسة المنار`;
+  document.title = `${video.title} – ألبوم الفيديو – مؤسسة المنار`;
 
   // player: real YouTube embed when an id is set, otherwise the thumbnail + "قريباً"
   player.innerHTML = video.youtube
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="yt-channel">
       <img class="yt-avatar" src="${window.siteUrl('assets/images/logos/logo.svg')}" alt="">
       <div>
-        <strong>مدرسة المنار</strong>
+        <strong>مؤسسة المنار</strong>
         <span>${esc(category)}</span>
       </div>
       <a href="${window.siteUrl('pages/creative/video-album.html')}" class="yt-back">ألبوم الفيديو ←</a>
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div>
         <h3 class="yt-title">${esc(v.title)}</h3>
-        <p class="yt-meta">مدرسة المنار</p>
+        <p class="yt-meta">مؤسسة المنار</p>
         <p class="yt-meta">${esc(window.VIDEO_CATEGORIES[v.category] || '')}</p>
       </div>
     </a>`).join('');

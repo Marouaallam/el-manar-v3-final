@@ -1,9 +1,14 @@
 /* =============================================
-   EL MANAR – ربع قرن (anniversary.html) – simple reading layout
+   EL MANAR – ربع قرن (anniversary.html)
+   Same look as the home-page anniversary card:
+   25 emblem + "ربع قرن" title, faint pattern, green/red accent from the emblem leaf
    ============================================= */
 
 .an-page {
-  padding: 70px 24px 90px;
+  padding: clamp(44px, 6vw, 70px) clamp(16px, 3vw, 24px) clamp(64px, 8vw, 90px);
+  background:
+    url('../../assets/patterns/hero-pattern-blue.png') center / 600px auto repeat,
+    #ffffff;
 }
 
 .an-column {
@@ -11,54 +16,128 @@
   margin: 0 auto;
 }
 
-.an-badges {
+/* ── Header: emblem + titles ── */
+.an-head {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 36px;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 28px);
+  padding: clamp(22px, 3vw, 32px) clamp(16px, 3vw, 36px);
+  margin-bottom: clamp(32px, 4vw, 44px);
+  background: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 26px;
+  box-shadow: 0 10px 30px -8px rgba(7, 38, 89, 0.06), 0 2px 6px rgba(0, 0, 0, 0.015);
+  overflow: hidden;
 }
 
-.an-logo-full {
-  max-width: 480px;
-  width: 100%;
+/* green -> red line, like the leaf on the emblem */
+.an-head::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #28AD4B 30%, #1b7a37 50%, #D61727 70%, transparent);
+  border-radius: 0 0 4px 4px;
+}
+
+.an-badge25 {
+  width: clamp(100px, 18vw, 190px);
   height: auto;
-  display: block;
+  flex-shrink: 0;
   object-fit: contain;
-  filter: drop-shadow(0 10px 24px rgba(7, 38, 89, 0.08));
+  filter: drop-shadow(0 10px 22px rgba(7, 38, 89, 0.10));
+  animation: an-badge-in .7s cubic-bezier(.2, .8, .2, 1.1) .15s both;
 }
 
+@keyframes an-badge-in {
+  from { opacity: 0; transform: scale(.85) rotate(-8deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+.an-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.an-title {
+  font-size: clamp(38px, 5.5vw + 10px, 72px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.an-for {
+  font-size: clamp(18px, 1.6vw + 10px, 28px);
+  font-weight: 800;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.an-sub {
+  font-size: clamp(14px, 1.2vw + 8px, 22px);
+  font-weight: 700;
+  color: var(--blue-800);
+  white-space: nowrap;
+}
+
+/* ── Quote ── */
 .an-quote {
-  font-size: 20px;
+  position: relative;
+  font-size: clamp(17px, 0.6vw + 14px, 20px);
   line-height: 2;
   font-weight: 600;
   color: #072659;
   text-align: center;
-  margin: 0 0 48px;
+  margin: 0 0 clamp(36px, 5vw, 48px);
+  padding: clamp(20px, 3vw, 28px) clamp(18px, 3vw, 32px);
+  background: var(--blue-50);
+  border-radius: 22px;
+  border-right: 4px solid #D61727;
 }
 
 .an-quote cite {
   display: block;
   margin-top: 12px;
-  font-size: 15px;
+  font-size: clamp(14px, 0.3vw + 13px, 15px);
   font-style: normal;
   font-weight: 700;
   color: var(--blue-700);
 }
 
+/* ── Text ── */
 .an-column h2 {
-  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(21px, 0.8vw + 17px, 26px);
   font-weight: 800;
   color: var(--blue-800);
-  margin: 40px 0 12px;
+  margin: clamp(32px, 4vw, 44px) 0 12px;
+}
+
+/* small green/red mark before each heading, from the emblem */
+.an-column h2::before {
+  content: '';
+  width: 6px;
+  height: 22px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #28AD4B 0%, #28AD4B 50%, #D61727 50%, #D61727 100%);
+  flex-shrink: 0;
 }
 
 .an-column p {
-  font-size: 17.5px;
+  font-size: clamp(16.5px, 0.3vw + 15.5px, 17.5px);
   line-height: 2.05;
   color: #2b3a5c;
 }
 
-/* simple timeline: a line with dots, no boxes */
+/* ── Timeline: a line with dots ── */
 .an-timeline {
   list-style: none;
   margin: 0;
@@ -68,7 +147,7 @@
 
 .an-timeline li {
   position: relative;
-  font-size: 17px;
+  font-size: clamp(16px, 0.3vw + 15px, 17px);
   line-height: 1.9;
   color: #2b3a5c;
   padding: 6px 0;
@@ -78,11 +157,19 @@
   content: '';
   position: absolute;
   top: 16px;
-  right: -29px;
-  width: 12px;
-  height: 12px;
+  right: -30px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: var(--blue-600);
+  background: #ffffff;
+  border: 3px solid #28AD4B;
+  box-sizing: border-box;
+}
+
+/* the 25th anniversary gets the red dot */
+.an-timeline li:last-child::before {
+  border-color: #D61727;
+  background: #D61727;
 }
 
 .an-timeline span {
@@ -91,41 +178,40 @@
   margin-left: 12px;
 }
 
-.an-cta {
-  margin-top: 48px;
+/* ── Back link (end of page) ── */
+.an-back {
+  margin-top: clamp(40px, 5vw, 56px);
   text-align: center;
 }
 
-.an-cta a {
-  display: inline-block;
-  background: var(--blue-600);
-  color: #ffffff;
-  font-size: 16px;
+.an-back a {
+  font-size: clamp(15px, 0.4vw + 13px, 17px);
   font-weight: 700;
-  padding: 13px 30px;
-  border-radius: 999px;
+  color: var(--blue-800);
   text-decoration: none;
-  transition: background-color .2s ease;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color .2s ease;
 }
 
-.an-cta a:hover {
-  background: var(--blue-800);
+.an-back a:hover {
+  border-bottom-color: currentColor;
 }
 
-@media (max-width: 640px) {
-  .an-page {
-    padding: 48px 16px 70px;
+/* narrow phones: emblem above the text */
+@media (max-width: 420px) {
+  .an-head {
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .an-logo-full {
-    max-width: 320px;
+  .an-sub {
+    white-space: normal;
+    text-align: center;
   }
+}
 
-  .an-quote {
-    font-size: 17.5px;
-  }
-
-  .an-column p {
-    font-size: 16.5px;
+@media (prefers-reduced-motion: reduce) {
+  .an-badge25 {
+    animation: none;
   }
 }

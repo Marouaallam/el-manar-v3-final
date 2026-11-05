@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img class="yt-avatar" src="${window.siteUrl('assets/images/logos/logo.svg')}" alt="">
         <div>
           <h3 class="yt-title">${esc(v.title)}</h3>
-          <p class="yt-meta">مدرسة المنار · ${esc(window.VIDEO_CATEGORIES[v.category] || '')}</p>
+          <p class="yt-meta">مؤسسة المنار · ${esc(window.VIDEO_CATEGORIES[v.category] || '')}</p>
         </div>
       </div>
     </a>`;

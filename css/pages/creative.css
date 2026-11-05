@@ -201,7 +201,7 @@
   align-items: center;
   justify-content: center;
   background:
-    url('../../assets/patterns/background-blue.svg') center / 400px auto repeat,
+    url('../../assets/patterns/hero-pattern-blue.png') center / 480px auto repeat,
     linear-gradient(135deg, #fff8e6, #fdecc4);
 }
 
@@ -233,7 +233,7 @@
 .cs-cta {
   margin-top: 56px;
   background:
-    url('../../assets/patterns/background-white.svg') center / 600px auto repeat,
+    url('../../assets/patterns/hero-pattern-white.png') center / 700px auto repeat,
     linear-gradient(135deg, #0e5dbb 0%, #156bc8 32%, #1b85df 65%, #38bdf8 100%);
   color: #ffffff;
   border-radius: 24px;
@@ -876,7 +876,7 @@ a.cs-profile {
   position: relative;
   aspect-ratio: 4 / 3;
   background:
-    url('../../assets/patterns/background-blue.svg') center / 400px auto repeat,
+    url('../../assets/patterns/hero-pattern-blue.png') center / 480px auto repeat,
     linear-gradient(160deg, #eaf2fc, #d6e6fa);
   display: flex;
   align-items: center;
