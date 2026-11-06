@@ -55,9 +55,8 @@ body {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   color: var(--text);
   background: var(--white);
-  line-height: 1.85;
-  font-size: 21px;
-  font-weight: 700;
+  line-height: 1.7;
+  font-size: 17px;
 }
 
 h1,
@@ -66,8 +65,8 @@ h3,
 h4,
 h5 {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
-  font-weight: 700;
-  line-height: 1.35;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 a {
@@ -192,7 +191,7 @@ img {
 .topbar {
   background: var(--brutal-green);
   color: #ffffff;
-  font-size: 15px;
+  font-size: 13px;
   text-align: center;
   padding: 9px 0;
   letter-spacing: .2px;
@@ -267,7 +266,7 @@ nav.menu ul {
   display: flex;
   align-items: center;
   gap: 18px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--gray-700);
   margin: 0;
@@ -428,7 +427,7 @@ nav.menu ul li:hover::after {
   padding: 10px 24px;
   border-radius: var(--brutal-radius-pill);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 15px;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
@@ -609,8 +608,7 @@ nav.menu ul li:hover::after {
 
 .hero h1 {
   font-size: clamp(34px, 4.6vw + 8px, 70px);
-  line-height: 1.15;
-  font-weight: 700;
+  line-height: 1.2;
   color: #ffffff;
   text-shadow: 0 4px 20px rgba(7, 25, 56, 0.3);
   /* optical balance: the glyphs leave more empty room below the title than above it,
@@ -621,9 +619,8 @@ nav.menu ul li:hover::after {
 .hero p {
   max-width: 600px;
   color: rgba(255, 255, 255, .95);
-  font-size: clamp(17px, 0.9vw + 13px, 25px);
-  font-weight: 700;
-  line-height: 1.8;
+  font-size: clamp(16px, 0.9vw + 12px, 24px);
+  line-height: 1.6;
   margin: 0;
   overflow-wrap: break-word;
 }
@@ -632,7 +629,6 @@ nav.menu ul li:hover::after {
   /* red gradient from the flame in the El Manar logo */
   background: linear-gradient(135deg, #ED1B32 0%, #D61727 55%, #B91319 100%);
   color: #ffffff;
-  font-weight: 700;
   border-radius: var(--brutal-radius-pill);
   border: 1.5px solid #B91319 !important;
   box-shadow: 0 6px 18px rgba(185, 19, 25, 0.30);
@@ -848,7 +844,7 @@ nav.menu ul li:hover::after {
   background: #ffffff;
   border: var(--brutal-border-width-sm) solid var(--brutal-border-color);
   color: var(--ink, #0d1527);
-  font-size: 19.5px;
+  font-size: 18.5px;
   padding: 10px 26px;
   border-radius: var(--brutal-radius-pill);
   font-weight: 700;
@@ -1495,7 +1491,7 @@ nav.menu ul li:hover::after {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: #1e293b;
 }
@@ -1510,7 +1506,7 @@ nav.menu ul li:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 900;
   flex-shrink: 0;
 }
@@ -1542,20 +1538,18 @@ nav.menu ul li:hover::after {
 }
 
 .story h3 {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 38px;
   color: var(--blue-800);
   margin-bottom: 18px;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .story p,
 .story-grid p {
   color: #334155;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.85;
-  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 24px;
 }
 
 .mini-cards {
@@ -3434,4 +3428,15 @@ a.floating-signup {
   padding: clamp(5px, 0.3vw + 4px, 6px) clamp(6px, 0.3vw + 5px, 8px) clamp(5px, 0.3vw + 4px, 6px) clamp(18px, 1vw + 12px, 24px) !important;
   font-size: clamp(15px, 0.4vw + 13px, 17px) !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+/* =============================================
+   Unified paragraph text – every paragraph on the site uses the same
+   size and weight as the home page "عن المؤسسة" text (17px, regular).
+   Kept as exceptions: footer small print, video meta captions,
+   the basmala in the director's message and the role-model subtitle.
+   ============================================= */
+p:not(footer p):not(.yt-meta):not(.speech-basmala):not(.cs-detail-sub) {
+  font-size: 17px !important;
+  font-weight: 400 !important;
 }

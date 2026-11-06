@@ -73,16 +73,15 @@
 }
 
 .value-card-box h3 {
-  font-size: 21px;
-  font-weight: 800;
+  font-size: 22px;
   color: #072659;
   margin-bottom: 4px;
 }
 
 .value-card-box p {
-  font-size: 17px;
+  font-size: 15.5px;
   color: #556885;
-  line-height: 1.9;
+  line-height: 1.7;
 }
 
 @media (max-width: 640px) {
